@@ -12,7 +12,7 @@ const Header = () => {
         />
       </div>
       <h3 className="text-xl md:text-2xl mb-3 font-Ovo">
-        Hi! I'm Abhishek P V
+        Hi! I am Abhishek P V
       </h3>
       <h1 className="text-3xl sm:text-6xl font-Ovo">frontend web developer</h1>
       <p className="max-w-2xl mx-auto font-Ovo">
