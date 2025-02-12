@@ -15,7 +15,7 @@ const Header = () => {
         Hi! I am Abhishek P V
       </h3>
       <h1 className="text-3xl sm:text-6xl font-Ovo">frontend web developer</h1>
-      <p className="max-w-2xl mx-auto font-Ovo">
+      <p className="max-w-2xl mx-auto font-Ovo px-1">
         I am a frontend developer from Kerala, India, with over a year of
         experience building dynamic and user-friendly web applications.
       </p>
