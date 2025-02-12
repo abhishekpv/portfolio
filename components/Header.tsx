@@ -3,7 +3,7 @@ import Image from "next/image";
 
 const Header = () => {
   return (
-    <div>
+    <div id='top' className="w-full max-w-3xl text-center mx-auto h-screen flex flex-col items-center justify-center gap-4">
       <div className="w-32 aspect-square overflow-hidden rounded-full">
         <Image
           className="w-32 -mt-6"
@@ -16,7 +16,7 @@ const Header = () => {
       </h3>
       <h1 className="text-3xl sm:text-6xl font-Ovo">frontend web developer</h1>
       <p className="max-w-2xl mx-auto font-Ovo">
-        I’m a frontend developer from Kerala, India, with over a year of
+        I am a frontend developer from Kerala, India, with over a year of
         experience building dynamic and user-friendly web applications.
       </p>
       <div className="flex flex-col sm:flex-row items-center gap-4 mt-4">

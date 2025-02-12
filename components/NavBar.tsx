@@ -2,39 +2,55 @@ import Image from "next/image";
 import { assets } from "@/assets/assets";
 import { useState } from "react";
 
+const navItems = [
+  {
+    label: "Home",
+    href: "#top",
+    class: "",
+  },
+  {
+    label: "About",
+    href: "#about",
+    class: "",
+  },
+  {
+    label: "Experience",
+    href: "#experience",
+    class: "",
+  },
+  {
+    label: "Skills",
+    href: "#skills",
+    class: "",
+  },
+  {
+    label: "Works",
+    href: "#works",
+    class: "",
+  },
+  {
+    label: "Contact",
+    href: "#contact",
+    class: "",
+  },
+];
+
 const NavLinks = ({ onClick }: { onClick?: () => void }) => {
   return (
     <>
-      <li>
-        <a className="font-Ovo" onClick={onClick} href="#top">
-          Home
-        </a>
-      </li>
-      <li>
-        <a className="font-Ovo" onClick={onClick} href="#about">
-          About
-        </a>
-      </li>
-      <li>
-        <a className="font-Ovo" onClick={onClick} href="#experience">
-          Experience
-        </a>
-      </li>
-      <li>
-        <a className="font-Ovo" onClick={onClick} href="#skills">
-          Skills
-        </a>
-      </li>
-      <li>
-        <a className="font-Ovo" onClick={onClick} href="#works">
-          Works
-        </a>
-      </li>
-      <li>
-        <a className="font-Ovo" onClick={onClick} href="#contact">
-          Contact
-        </a>
-      </li>
+      {navItems.map((item) => {
+        return (
+          <li key={item.href}>
+            <a 
+              className={`font-Ovo hover:text-gray-700 duration-200 ${item.class} `}
+              onClick={onClick}
+              href={item.href}
+            >
+              {item.label}
+            </a>
+          </li>
+        );
+      })}
     </>
   );
 };
@@ -64,7 +80,7 @@ const NavBar = () => {
           href="#top"
           className="w-28 text-3xl cursor-pointer whitespace-nowrap font-medium mr-16"
         >
-          Abhishek <span className="text-red-700 text-4xl">.</span>
+          Abhishek<span className="text-pink-600 text-4xl">.</span>
         </a>
         <ul className="hidden md:flex items-center gap-6 lg:gap-8 rounded-full px-12 py-3 bg-white shadow-sm bg-opacity-50">
           <NavLinks />
@@ -74,8 +90,9 @@ const NavBar = () => {
             <Image alt="theme-moon" src={assets.moon_icon} className="w-6" />
           </button>
           <a
-            href=""
-            className="hidden font-Ovo lg:flex items-center gap-3 px-10 py-2.5 border border-gray-500 rounded-full ml-4"
+            href="/abhishek-sde-cv.pdf"
+						download
+            className="hidden font-Ovo lg:flex items-center gap-3 px-10 py-2.5 border border-gray-500 rounded-full ml-4 duration-300 hover:shadow-sm hover:border-gray-800 "
           >
             Resume
             <Image
