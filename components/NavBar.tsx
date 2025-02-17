@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { assets } from "@/assets/assets";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const navItems = [
   {
@@ -41,7 +41,7 @@ const NavLinks = ({ onClick }: { onClick?: () => void }) => {
       {navItems.map((item) => {
         return (
           <li key={item.href}>
-            <a 
+            <a
               className={`font-Ovo hover:text-gray-700 duration-200 ${item.class} `}
               onClick={onClick}
               href={item.href}
@@ -57,6 +57,7 @@ const NavLinks = ({ onClick }: { onClick?: () => void }) => {
 
 const NavBar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isScroll, setIsScroll] = useState(false);
 
   const openMenuBar = () => {
     setIsMenuOpen(true);
@@ -65,6 +66,16 @@ const NavBar = () => {
   const closeMenubar = () => {
     setIsMenuOpen(false);
   };
+
+  useEffect(() => {
+    window.addEventListener("scroll", () => {
+      if (scrollY > 100) {
+        setIsScroll(true);
+      } else {
+        setIsScroll(false);
+      }
+    });
+  }, []);
 
   return (
     <>
@@ -75,14 +86,18 @@ const NavBar = () => {
           className="w-full"
         />
       </div>
-      <nav className="fixed w-full px-5 lg:px-8 xl:px-[8%] py-4 flex items-center justify-between z-50">
+      <nav
+        className={`fixed w-full px-5 lg:px-8 xl:px-[8%] py-4 flex items-center justify-between duration-300 z-50 ${
+          isScroll ? "bg-white bg-opacity-50 backdrop-blur-lg shadow-sm" : ""
+        }`}
+      >
         <a
           href="#top"
           className="w-28 text-3xl cursor-pointer whitespace-nowrap font-medium mr-16"
         >
           Abhishek<span className="text-pink-600 text-4xl">.</span>
         </a>
-        <ul className="hidden md:flex items-center gap-6 lg:gap-8 rounded-full px-12 py-3 bg-white shadow-sm bg-opacity-50">
+        <ul className={`hidden md:flex items-center gap-6 lg:gap-8 rounded-full px-12 py-3 duration-300 bg-white shadow-sm  ${isScroll?"bg-opacity-80":'bg-opacity-50'}`}>
           <NavLinks />
         </ul>
         <div className="flex items-center gap-4">
@@ -91,7 +106,7 @@ const NavBar = () => {
           </button>
           <a
             href="/abhishek-sde-cv.pdf"
-						download
+            download
             className="hidden font-Ovo lg:flex items-center gap-3 px-10 py-2.5 border border-gray-500 rounded-full ml-4 duration-300 hover:shadow-sm hover:border-gray-800 "
           >
             Resume

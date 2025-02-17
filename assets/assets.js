@@ -8,6 +8,9 @@ import project_icon_dark from "./project-icon-dark.png";
 import vscode from "./vscode.png";
 import firebase from "./firebase.png";
 import figma from "./figma.png";
+import jira from "./Jira.png";
+import postman from "./postman.png";
+import storyBook from "./storybook.png";
 import git from "./git.png";
 import mongodb from "./mongodb.png";
 import right_arrow_white from "./right-arrow-white.png";
@@ -46,6 +49,9 @@ export const assets = {
   firebase,
   figma,
   git,
+  jira,
+  postman,
+  storyBook,
   mongodb,
   right_arrow_white,
   mail_icon,
@@ -146,9 +152,24 @@ export const infoList = [
 ];
 
 export const toolsData = [
-  assets.vscode,
-  assets.firebase,
-  assets.mongodb,
-  assets.figma,
-  assets.git,
+  {
+    title: 'VSCode',
+    icon: assets.vscode,
+  },
+  {
+    title: "Git",
+    icon: assets.git,
+  },
+  {
+    title: 'Jira',
+    icon: assets.jira,
+  },
+  {
+    title: 'Postman',
+    icon: assets.postman,
+  },
+  {
+    title: 'MongoDB',
+    icon: assets.mongodb,
+  },
 ];

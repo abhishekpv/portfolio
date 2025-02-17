@@ -21,14 +21,14 @@ const TechStackList = ({
   return (
     <div
       className={`flex gap-2 items-center ${
-        reverse ? "flex-col-reverse mt-8" : "flex-col"
+        reverse ? "flex-col-reverse mt-8 " : "flex-col"
       } ${className}`}
     >
       {techStack.map((item) => {
         return (
           <p
             key={item}
-            className="bg-gray-100 whitespace-nowrap rounded-sm w-full text-center px-4 py-1.5"
+            className="bg-gray-100 text-gray-400 whitespace-nowrap rounded-sm w-full text-center px-4 py-1.5"
           >
             {item}
           </p>
@@ -40,9 +40,9 @@ const TechStackList = ({
 
 const TechStack = () => {
   return (
-    <li className="relative border w-80 pb-20 overflow-hidden">
-      <Image className="" src={assets.code_icon} alt="language-icon" />
-      <h3 className="">Tech stack</h3>
+    <li className="relative border border-gray-400 hover:border-gray-700 hover:-translate-y-1 hover:shadow-black duration-300 p-6 cursor-pointer rounded-xl max-w-80 mx-auto lg:m-0 w-full pb-20 overflow-hidden ">
+      <Image className="w-7 mt-3" src={assets.code_icon} alt="language-icon" />
+      <h3 className="my-4 font-semibold text-gray-700">Tech stack</h3>
       <div className="absolute right-2 -z-10 -top-14 w-fit flex gap-2">
         <TechStackList />
         <TechStackList reverse={true} />
