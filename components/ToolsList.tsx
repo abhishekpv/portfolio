@@ -30,8 +30,8 @@ const ToolCard = ({
         alt={title}
       />
       <p
-        className={`w-full font-Outfit h-full absolute text-gray-700 flex items-center duration-1000 bg-transparent backdrop-blur-sm scale-150 justify-center top-0 ${
-          isHover ? "opacity-100 scale-100" : "opacity-0"
+        className={`w-full font-Outfit h-full absolute text-gray-700 flex items-center duration-1000 bg-transparent backdrop-blur-sm  justify-center top-0 ${
+          isHover ? "opacity-100 scale-100" : "opacity-0 scale-150"
         }`}
       >
         {title}
