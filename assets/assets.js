@@ -36,9 +36,13 @@ import right_arrow from "./right-arrow.png";
 import send_icon from "./send-icon.png";
 import right_arrow_bold from "./right-arrow-bold.png";
 import right_arrow_bold_dark from "./right-arrow-bold-dark.png";
+import open_link_black from "./open-link-black.png";
+import open_link_white from "./open-link-white.png";
+import qburst from "./qburst.png";
 
 export const assets = {
   user_image,
+  qburst,
   code_icon,
   code_icon_dark,
   edu_icon,
@@ -48,6 +52,8 @@ export const assets = {
   vscode,
   firebase,
   figma,
+  open_link_black,
+  open_link_white,
   git,
   jira,
   postman,
@@ -151,9 +157,70 @@ export const infoList = [
   },
 ];
 
+export const experienceData = [
+  {
+    companyId: 1001,
+    companyName: "Company 1",
+    CompanyLogo: assets.qburst,
+    startDate: "Aug 2023",
+    companyLink: "https://www.qburst.com/",
+    endDate: "Present",
+    positions: [
+      {
+        position: "Software Engineer",
+        startDate: "Aug 2023",
+        endDate: "Present",
+        duration: "1+ years",
+        location: "Thrissur, Kerala",
+        locationHref: "https://maps.app.goo.gl/VDedLTtuXk19HucU9",
+        responsobilities: [
+          "Elevated unit test coverage from 40% to 90% through code modularization and comprehensive testing scenarios.",
+          "Developed scalable frontend solutions, reducing load times by 25% and enhancing maintainability by 20%",
+          "Implemented Formik for form handling, boosting form accuracy by 30% and improving reusability.",
+          "Introduced role-based access control, enhancing security and boosting performance and user satisfaction.",
+          "Collaborated to resolve 1000+ bugs, ensuring stable and efficient application releases.",
+        ],
+      },
+    ],
+  },
+];
+
+export const navItems = [
+  {
+    label: "Home",
+    href: "#top",
+    class: "",
+  },
+  {
+    label: "About",
+    href: "#about",
+    class: "",
+  },
+  {
+    label: "Experience",
+    href: "#experience",
+    class: "",
+  },
+  {
+    label: "Skills",
+    href: "#skills",
+    class: "",
+  },
+  {
+    label: "Works",
+    href: "#works",
+    class: "",
+  },
+  {
+    label: "Contact",
+    href: "#contact",
+    class: "",
+  },
+];
+
 export const toolsData = [
   {
-    title: 'VSCode',
+    title: "VSCode",
     icon: assets.vscode,
   },
   {
@@ -161,15 +228,15 @@ export const toolsData = [
     icon: assets.git,
   },
   {
-    title: 'Jira',
+    title: "Jira",
     icon: assets.jira,
   },
   {
-    title: 'Postman',
+    title: "Postman",
     icon: assets.postman,
   },
   {
-    title: 'MongoDB',
+    title: "MongoDB",
     icon: assets.mongodb,
   },
 ];

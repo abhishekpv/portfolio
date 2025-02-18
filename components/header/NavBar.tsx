@@ -1,59 +1,8 @@
 import Image from "next/image";
 import { assets } from "@/assets/assets";
 import { useEffect, useState } from "react";
-
-const navItems = [
-  {
-    label: "Home",
-    href: "#top",
-    class: "",
-  },
-  {
-    label: "About",
-    href: "#about",
-    class: "",
-  },
-  {
-    label: "Experience",
-    href: "#experience",
-    class: "",
-  },
-  {
-    label: "Skills",
-    href: "#skills",
-    class: "",
-  },
-  {
-    label: "Works",
-    href: "#works",
-    class: "",
-  },
-  {
-    label: "Contact",
-    href: "#contact",
-    class: "",
-  },
-];
-
-const NavLinks = ({ onClick }: { onClick?: () => void }) => {
-  return (
-    <>
-      {navItems.map((item) => {
-        return (
-          <li key={item.href}>
-            <a
-              className={`font-Ovo hover:text-gray-700 duration-200 ${item.class} `}
-              onClick={onClick}
-              href={item.href}
-            >
-              {item.label}
-            </a>
-          </li>
-        );
-      })}
-    </>
-  );
-};
+import NavLinks from "./NavLinks";
+import MobileNavBar from "./MobileNavBar";
 
 const NavBar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -67,14 +16,19 @@ const NavBar = () => {
     setIsMenuOpen(false);
   };
 
+  const handleScroll = () => {
+    if (scrollY > 100) {
+      setIsScroll(true);
+    } else {
+      setIsScroll(false);
+    }
+  };
+
   useEffect(() => {
-    window.addEventListener("scroll", () => {
-      if (scrollY > 100) {
-        setIsScroll(true);
-      } else {
-        setIsScroll(false);
-      }
-    });
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
   }, []);
 
   return (
@@ -97,7 +51,11 @@ const NavBar = () => {
         >
           Abhishek<span className="text-pink-600 text-4xl">.</span>
         </a>
-        <ul className={`hidden md:flex items-center gap-6 lg:gap-8 rounded-full px-12 py-3 duration-300 bg-white shadow-sm  ${isScroll?"bg-opacity-80":'bg-opacity-50'}`}>
+        <ul
+          className={`hidden md:flex items-center gap-6 lg:gap-8 rounded-full px-12 py-3 duration-300 bg-white shadow-sm  ${
+            isScroll ? "bg-opacity-80" : "bg-opacity-50"
+          }`}
+        >
           <NavLinks />
         </ul>
         <div className="flex items-center gap-4">
@@ -125,22 +83,7 @@ const NavBar = () => {
             />
           </button>
         </div>
-
-        <ul
-          className={`flex md:hidden flex-col gap-4 py-20 px-10 fixed -right-64 top-0 bottom-0 w-64 z-50 h-screen bg-rose-50 transition duration-500 ${
-            isMenuOpen && "-translate-x-[16rem]"
-          }`}
-        >
-          <div className="absolute right-6 top-6">
-            <Image
-              alt="hamburger-close"
-              src={assets.close_black}
-              className="w-5 cursor-pointer"
-              onClick={closeMenubar}
-            />
-          </div>
-          <NavLinks onClick={closeMenubar} />
-        </ul>
+        <MobileNavBar closeMenubar={closeMenubar} isMenuOpen={isMenuOpen} />
       </nav>
     </>
   );

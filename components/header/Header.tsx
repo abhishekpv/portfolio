@@ -3,7 +3,10 @@ import Image from "next/image";
 
 const Header = () => {
   return (
-    <div id='top' className="w-full max-w-3xl text-center mx-auto h-screen flex flex-col items-center justify-center gap-4">
+    <div
+      id="top"
+      className="w-full max-w-3xl text-center mx-auto h-screen flex flex-col items-center justify-center gap-4"
+    >
       <div className="w-32 aspect-square overflow-hidden rounded-full">
         <Image
           className="w-32 -mt-6"
