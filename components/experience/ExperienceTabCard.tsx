@@ -1,4 +1,3 @@
-import { assets } from "@/assets/assets";
 import Image, { StaticImageData } from "next/image";
 import { Dispatch, SetStateAction } from "react";
 import CompanyHeader from "./CompanyHeader";

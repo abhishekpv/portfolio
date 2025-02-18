@@ -160,7 +160,7 @@ export const infoList = [
 export const experienceData = [
   {
     companyId: 1001,
-    companyName: "Company 1",
+    companyName: "QBurst",
     CompanyLogo: assets.qburst,
     startDate: "Aug 2023",
     companyLink: "https://www.qburst.com/",
