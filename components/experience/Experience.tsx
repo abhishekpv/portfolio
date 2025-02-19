@@ -11,6 +11,10 @@ const Experience = () => {
         Professional Journey
       </h4>
       <h2 className="text-center text-5xl font-Ovo">Experience</h2>
+      <p className="text-center max-w-2xl mx-auto mt-5 mb-12 font-Ovo">
+        Bringing ideas to life through impactful development and real-world
+        experience.
+      </p>
       <ExperienceBody />
     </div>
   );
