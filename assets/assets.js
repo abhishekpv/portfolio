@@ -86,24 +86,24 @@ export const assets = {
 
 export const workData = [
   {
-    title: "Frontend project",
-    description: "Web Design",
-    bgImage: "/work-1.png",
+    title: "KIF Products",
+    description: "Web app",
+    bgImage: "/kifproducts.png",
   },
   {
-    title: "Geo based app",
+    title: "TripCast",
     description: "Mobile App",
-    bgImage: "/work-2.png",
+    bgImage: "/tripcast.png",
   },
   {
-    title: "Photography site",
-    description: "Web Design",
-    bgImage: "/work-3.png",
+    title: "Lucky Check",
+    description: "Mobile App",
+    bgImage: "/luckyCheck.png",
   },
   {
-    title: "UI/UX designing",
-    description: "UI/UX Design",
-    bgImage: "/work-4.png",
+    title: "Papoteur",
+    description: "Web app",
+    bgImage: "/papoteur.png",
   },
 ];
 

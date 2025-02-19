@@ -10,8 +10,8 @@ const About = () => {
       <h4 className="text-center mb-2 text-lg font-Ovo">Introduction</h4>
       <h2 className="text-center text-5xl font-Ovo">About me</h2>
       <div className="flex w-full justify-center flex-col lg:flex-row items-center gap-20 my-20">
-        <div className="w-64 sm:w-80 rounded-3xl overflow-hidden">
-          <Image className="" src={assets.user_image} alt="profile-img" />
+        <div className="w-64 sm:w-80 sm:min-w-72 rounded-3xl overflow-hidden">
+          <Image className="sm:min-w-72" src={assets.user_image} alt="profile-img" />
         </div>
         <div className="fle">
           <p className="mb-10 max-w-2xl font-Ovo">
@@ -20,7 +20,7 @@ const About = () => {
             in JavaScript, I build web and mobile frontend solutions using
             modern frameworks and best practices.
           </p>
-          <ul className="flex gap-6 flex-wrap max-w-3xl ">
+          <ul className="flex gap-6 max-xl:flex-wrap max-w-3xl ">
             <TechStack />
             <EducationStack/>
           </ul>
