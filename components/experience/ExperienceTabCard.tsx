@@ -29,7 +29,7 @@ const ExperienceTabCard = ({
       onClick={handleClick}
     >
       <div
-        className={` px-1 py-1 overflow-hidden h-fit duration-300 w-fit border-2 bg-white  border-pink-300 rounded-full ${
+        className={` px-1 py-1 ml-[6px] overflow-hidden h-fit duration-300 w-fit border-2 bg-white  border-pink-300 rounded-full ${
           selected ? "" : " scale-95"
         }`}
       >
