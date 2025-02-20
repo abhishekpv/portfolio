@@ -1,4 +1,5 @@
 import React from "react";
+import WorkContainer from "./WorkContainer";
 
 const Works = () => {
   return (
@@ -14,6 +15,7 @@ const Works = () => {
         Welcome to my development portfolio! Explore a collection of projects
         showcasing my expertise in front-end development.
       </p>
+      <WorkContainer/>
       <p className="text-center my-40 text-lg text-red-600 ">
         Section under development
       </p>

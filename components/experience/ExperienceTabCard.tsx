@@ -29,7 +29,7 @@ const ExperienceTabCard = ({
       onClick={handleClick}
     >
       <div
-        className={` px-1 py-1 ml-[6px] overflow-hidden h-fit duration-300 w-fit border-2 bg-white  border-pink-300 rounded-full ${
+        className={` px-1 py-1 ml-[6px] overflow-hidden h-fit duration-300 w-fit border-2 bg-white  border-gray-300 rounded-full ${
           selected ? "" : " scale-95"
         }`}
       >
@@ -52,7 +52,7 @@ const ExperienceTabCard = ({
         />
       </div>
       <div
-        className={`left-full ml-2 h-0.5 w-24 hidden md:block  duration-500 top-4 bg-gradient-to-l from-pink-500 -z-10 to-transparent   absolute ${
+        className={`left-full ml-2 h-0.5 w-24 hidden md:block  duration-500 top-4 bg-gradient-to-l from-gray-500 -z-10 to-transparent   absolute ${
           selected ? "" : "translate-x-28"
         }`}
       ></div>

@@ -86,21 +86,25 @@ export const assets = {
 
 export const workData = [
   {
+    id:1001,
     title: "KIF Products",
     description: "Web app",
     bgImage: "/kifproducts.png",
   },
   {
+    id:1002,
     title: "TripCast",
     description: "Mobile App",
     bgImage: "/tripcast.png",
   },
   {
+    id:1003,
     title: "Lucky Check",
     description: "Mobile App",
     bgImage: "/luckyCheck.png",
   },
   {
+    id:1004,
     title: "Papoteur",
     description: "Web app",
     bgImage: "/papoteur.png",
