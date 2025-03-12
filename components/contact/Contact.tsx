@@ -1,20 +1,19 @@
-import React from "react";
+import SectionHeader from "../SectionHeader";
+import ContactForm from "./ContactForm";
 
 const Contact = () => {
   return (
     <div
       id="contact"
-      className="w-full px-[12%] py-20 scroll-mt-20 z-10 min-h-screen"
+      className="w-full px-[12%] py-20 scroll-mt-20 bg-[url('/footer-bg-color.png')] bg-no-repeat bg-center bg-[length:90%_auto]"
     >
-      <h4 className="text-center mb-2 text-lg font-Ovo">Connect with me</h4>
-      <h2 className="text-center text-5xl font-Ovo">Get in touch</h2>
-      <p className="text-center max-w-2xl mx-auto mt-5 mb-12 font-Ovo">
-        I would love to hear from you! If you have any questions, comments or
-        feedback, please use the form below.
-      </p>
-      <p className="text-center my-40 text-lg text-red-600 ">
-        Section under development
-      </p>
+      <SectionHeader
+        heading="Connect with me"
+        subHeading="Get in touch"
+        description="I would love to hear from you! If you have any questions, comments or
+        feedback, please use the form below."
+      />
+      <ContactForm />
     </div>
   );
 };

@@ -1,4 +1,5 @@
 import React from "react";
+import SectionHeader from "../SectionHeader";
 
 const Skills = () => {
   return (
@@ -6,14 +7,12 @@ const Skills = () => {
       id="skills"
       className="w-full px-[12%] py-20 scroll-mt-20 z-10 min-h-screen"
     >
-      <h4 className="text-center mb-2 text-lg font-Ovo">
-        What I Bring to the Table
-      </h4>
-      <h2 className="text-center text-5xl font-Ovo">Skills</h2>
-      <p className="text-center max-w-2xl mx-auto mt-5 mb-12 font-Ovo">
-        Crafting seamless and high-performance web experiences with modern
-        technologies.
-      </p>
+      <SectionHeader
+        heading="What I Bring to the Table"
+        subHeading="Skills"
+        description="Crafting seamless and high-performance web experiences with modern
+        technologies."
+      />
       <p className="text-center my-40 text-lg text-red-600 ">
         Section under development
       </p>
