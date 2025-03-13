@@ -56,7 +56,7 @@ const ContactForm = () => {
             type={field.type}
             placeholder={field.placeholder}
             required={field.required}
-            className="w-full p-3 border border-gray-300 rounded-md outline-none focus:border-gray-500 duration-300"
+            className="w-full p-3 border border-gray-200 dark:bg-darkHover/30 dark:border-white/50 dark:focus:border-white rounded-md outline-none focus:border-gray-500 duration-300"
           />
         ))}
       </div>
@@ -65,11 +65,11 @@ const ContactForm = () => {
         rows={6}
         name="message"
         required
-        className="w-full p-3 border border-gray-300 rounded-md  outline-none focus:border-gray-500 duration-300 my-6"
+        className="w-full p-3 border border-gray-200 dark:bg-darkHover/30 dark:border-white/50 dark:focus:border-white rounded-md  outline-none focus:border-gray-500 duration-300 my-6"
       />
       <button
         type="submit"
-        className="w-max mx-auto py-3 px-8 flex items-center justify-between gap-2 bg-black/80 hover:bg-black duration-300 text-white rounded-full"
+        className="w-max mx-auto py-3 px-8 flex items-center justify-between gap-2 bg-black/80 hover:bg-black dark:bg-transparent dark:hover:bg-darkHover dark:border dark:border-white/50 duration-300 text-white rounded-full"
       >
         Submit now
         <Image

@@ -25,7 +25,7 @@ const CompanyHeader = ({
           }}
         >
           <Image
-            className="w-3 min-w-3"
+            className="w-3 min-w-3 dark:hover"
             alt={"open link"}
             src={assets.open_link_black}
           />

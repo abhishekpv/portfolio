@@ -5,7 +5,7 @@ const Contact = () => {
   return (
     <div
       id="contact"
-      className="w-full px-[12%] py-20 scroll-mt-20 bg-[url('/footer-bg-color.png')] bg-no-repeat bg-center bg-[length:90%_auto]"
+      className="w-full px-[12%] py-20 scroll-mt-20 bg-[url('/footer-bg-color.png')] dark:bg-none bg-no-repeat bg-center bg-[length:90%_auto]"
     >
       <SectionHeader
         heading="Connect with me"

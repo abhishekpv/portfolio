@@ -6,7 +6,7 @@ const Works = () => {
   return (
     <div
       id="works"
-      className="w-full px-[12%] py-20 scroll-mt-20 z-10 min-h-screen"
+      className="w-full px-[10%] py-20 scroll-mt-20 z-10 min-h-screen"
     >
       <SectionHeader
         heading="Bringing Ideas to Life"

@@ -12,7 +12,7 @@ const ExperienceCard = ({ selectedCompany }: ExperienceCardProps) => {
     return company.companyId === selectedCompany;
   });
   return (
-    <div className="min-h-96 border-2 border-gray-300 rounded-xl w-full max-w-xl bg-white">
+    <div className="min-h-96 border-2 border-gray-300 rounded-xl w-full max-w-xl bg-white dark:border-gray-600 dark:bg-[#260d3a]">
       {company?.positions.map((position, index) => {
         return (
           <Fragment key={index}>
