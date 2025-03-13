@@ -56,7 +56,7 @@ const ContactForm = () => {
             type={field.type}
             placeholder={field.placeholder}
             required={field.required}
-            className="w-full p-3 border border-gray-300 rounded-md outline-none focus:border-gray-500 duration-200"
+            className="w-full p-3 border border-gray-300 rounded-md outline-none focus:border-gray-500 duration-300"
           />
         ))}
       </div>
@@ -65,7 +65,7 @@ const ContactForm = () => {
         rows={6}
         name="message"
         required
-        className="w-full p-3 border border-gray-300 rounded-md  outline-none focus:border-gray-500 duration-200 my-6"
+        className="w-full p-3 border border-gray-300 rounded-md  outline-none focus:border-gray-500 duration-300 my-6"
       />
       <button
         type="submit"

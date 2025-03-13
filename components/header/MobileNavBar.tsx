@@ -10,7 +10,7 @@ type MobileNavBarProps = {
 const MobileNavBar = ({ closeMenubar, isMenuOpen }: MobileNavBarProps) => {
   return (
     <ul
-      className={`flex md:hidden flex-col gap-4 py-20 px-10 fixed -right-64 top-0 bottom-0 w-64 z-50 h-screen bg-rose-50 transition duration-500 ${
+      className={`flex md:hidden flex-col gap-4 py-20 px-10 fixed -right-64 top-0 bottom-0 w-64 z-50 h-screen bg-rose-50 dark:bg-darkHover transition duration-500 ${
         isMenuOpen && "-translate-x-[16rem]"
       }`}
     >
@@ -18,7 +18,7 @@ const MobileNavBar = ({ closeMenubar, isMenuOpen }: MobileNavBarProps) => {
         <Image
           alt="hamburger-close"
           src={assets.close_black}
-          className="w-5 cursor-pointer"
+          className="w-5 dark:invert cursor-pointer"
           onClick={closeMenubar}
         />
       </div>

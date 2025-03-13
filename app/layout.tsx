@@ -23,9 +23,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="scroll-smooth">
+    <html lang="en" className="scroll-smooth ">
       <body
-        className={`min-h-screen relative ${outfit.className} ${ovo.className} antialiased leading-8 overflow-x-hidden dark:bg-darkTheme`}
+        className={`min-h-screen duration-300 relative ${outfit.className} ${ovo.className} antialiased leading-8 overflow-x-hidden dark:bg-darkTheme dark:text-white`}
       >
         {children}
       </body>

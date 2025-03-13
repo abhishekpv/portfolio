@@ -7,7 +7,7 @@ const NavLinks = ({ onClick }: { onClick?: () => void }) => {
         return (
           <li key={item.href}>
             <a
-              className={`font-Ovo hover:text-gray-700 duration-200 ${item.class} `}
+              className={`font-Ovo text-black hover:text-gray-700 dark:text-white duration-200 ${item.class} `}
               onClick={onClick}
               href={item.href}
             >

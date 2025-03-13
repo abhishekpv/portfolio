@@ -18,7 +18,7 @@ const About = () => {
           />
         </div>
         <div className="fle">
-          <p className="mb-10 max-w-2xl font-Ovo">
+          <p className="mb-10 max-w-2xl max-md:text-justify font-Ovo">
             I am an experienced Frontend Developer with over a year of
             expertise, collaborating with prestigious organizations. Proficient
             in JavaScript, I build web and mobile frontend solutions using

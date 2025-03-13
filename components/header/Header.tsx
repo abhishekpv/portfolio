@@ -25,7 +25,7 @@ const Header = () => {
       <div className="flex flex-col sm:flex-row items-center gap-4 mt-4">
         <a
           href="#contact"
-          className="px-8 py-3 rounded-full border border-white bg-black text-white flex items-center gap-2"
+          className="px-8 py-3 rounded-full border duration-200 border-white dark:border-gray-500 bg-black dark:bg-transparent text-white flex items-center gap-2"
         >
           connect with me
           <Image
@@ -37,7 +37,7 @@ const Header = () => {
         <a
           href="/abhishek-sde-cv.pdf"
           download
-          className="px-10 py-3 rounded-full border border-gray-500 flex items-center gap-2"
+          className="px-10 py-3 rounded-full duration-200 border border-gray-500 dark:border-black bg-white text-black flex items-center gap-2"
         >
           my resume
           <Image
