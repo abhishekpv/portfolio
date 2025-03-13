@@ -2,10 +2,17 @@
 
 import { assets } from "@/assets/assets";
 import Image from "next/image";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useLayoutEffect, useState } from "react";
 
 const ThemeToggle = () => {
   const [isDarkMode, setIsDarkMode] = useState(false);
+
+  useLayoutEffect(() => {
+    const theme = window.localStorage.getItem("theme");
+    if (theme === "dark") {
+      setIsDarkMode(true);
+    }
+  }, []);
 
   useEffect(() => {
     if (isDarkMode) {
