@@ -28,7 +28,7 @@ const TechStackList = ({
         return (
           <p
             key={item}
-            className="bg-gray-100 text-gray-400 whitespace-nowrap rounded-sm w-full text-center px-4 py-1.5"
+            className="bg-gray-100 duration-200 dark:bg-darkHover/35 text-gray-400 dark:text-gray-600 whitespace-nowrap rounded-sm w-full text-center px-4 py-1.5"
           >
             {item}
           </p>
@@ -40,9 +40,9 @@ const TechStackList = ({
 
 const TechStack = () => {
   return (
-    <li className="relative border border-gray-400 hover:border-gray-700 hover:-translate-y-1 hover:shadow-black duration-300 p-6 cursor-pointer rounded-xl max-w-80 mx-auto lg:m-0 w-full pb-20 overflow-hidden ">
+    <li className="relative border border-gray-400 hover:border-gray-700 dark:hover:border-white dark:hover:bg-darkHover/25 hover:-translate-y-1 hover:shadow-black duration-300 p-6 cursor-pointer rounded-xl max-w-80 mx-auto lg:m-0 w-full pb-20 overflow-hidden ">
       <Image className="w-7 mt-3" src={assets.code_icon} alt="language-icon" />
-      <h3 className="my-4 font-semibold text-gray-700">Tech stack</h3>
+      <h3 className="my-4 font-semibold text-gray-700 dark:text-white">Tech stack</h3>
       <div className="absolute right-2 -z-10 -top-14 w-fit flex gap-2">
         <TechStackList />
         <TechStackList reverse={true} />

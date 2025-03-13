@@ -20,7 +20,7 @@ const ToolCard = ({
 
   return (
     <li
-      className="border w-full rounded-md border-gray-400 overflow-hidden cursor-pointer duration-500 max-w-28 py-3 relative hover:border-gray-600"
+      className="border w-full rounded-md border-gray-400 overflow-hidden cursor-pointer duration-500 max-w-28 py-3 relative hover:border-gray-600 dark:hover:border-white"
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
@@ -30,7 +30,7 @@ const ToolCard = ({
         alt={title}
       />
       <p
-        className={`w-full font-Outfit h-full absolute text-gray-700 flex items-center duration-700 bg-transparent backdrop-blur-sm  justify-center top-0 ${
+        className={`w-full font-Outfit h-full absolute text-gray-700 dark:text-white flex items-center duration-700 bg-transparent backdrop-blur-sm  justify-center top-0 ${
           isHover ? "opacity-100 scale-100" : "opacity-0 scale-150"
         }`}
       >
