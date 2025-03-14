@@ -8,7 +8,7 @@ type SkillCardProps={
     percentage:string;
 }
 
-const SkillCard=({color,icon,percentage,title}:SkillCardProps)=>{
+const SkillCard=({title}:SkillCardProps)=>{
     return <div className="border  p-5 rounded-lg">{title}</div>
 }
 
