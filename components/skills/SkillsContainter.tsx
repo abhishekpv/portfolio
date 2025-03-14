@@ -9,7 +9,7 @@ type SkillCardProps={
 }
 
 const SkillCard=({color,icon,percentage,title}:SkillCardProps)=>{
-    return <div className="border ">{title}</div>
+    return <div className="border  p-5 rounded-lg">{title}</div>
 }
 
 const SkillsContainter = () => {
