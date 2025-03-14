@@ -3,7 +3,7 @@ import SkillCard from "./SkillCard";
 import { useEffect, useMemo, useState } from "react";
 
 const SkillsContainter = () => {
-  const [isShowMore, setIsShowMore] = useState(false);
+  const [isShowMore, setIsShowMore] = useState(true);
 
   const formattedSkills = useMemo(() => {
     if (isShowMore) return skills;
@@ -20,6 +20,7 @@ const SkillsContainter = () => {
 
   useEffect(() => {
     window.addEventListener("resize", handleResize);
+    handleResize();
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
