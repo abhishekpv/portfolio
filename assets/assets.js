@@ -40,6 +40,7 @@ import open_link_black from "./open-link-black.png";
 import open_link_white from "./open-link-white.png";
 import qburst from "./qburst.png";
 import { color } from "motion/react";
+import { off } from "process";
 
 export const assets = {
   user_image,
@@ -229,91 +230,112 @@ export const skills = [
     icon: assets.figma,
     percentage: "90%",
     color: "#61DAFB",
+    offsetColor: "61DAFG",
   },
   {
     title: "Next Js",
     icon: assets.figma,
     percentage: "80%",
     color: "#61DAFB",
+    offsetColor: "61DAFG",
   },
   {
     title: "HTML",
     icon: assets.figma,
     percentage: "90%",
     color: "#61DAFB",
+    offsetColor: "61DAFG",
   },
   {
     title: "CSS",
     icon: assets.figma,
     percentage: "90%",
     color: "#61DAFB",
+    offsetColor: "61DAFG",
   },
   {
     title: "JavaScript",
     icon: assets.figma,
     percentage: "90%",
     color: "#61DAFB",
+    offsetColor: "61DAFG",
   },
   {
     title: "TypeScript",
     icon: assets.figma,
     percentage: "80%",
     color: "#61DAFB",
+    offsetColor: "61DAFG",
   },
   {
     title: "Redux Tool Kit",
     icon: assets.figma,
     color: "#61DAFB",
     percentage: "80%",
+    offsetColor: "61DAFG",
   },
   {
     title: "Tailwind CSS",
     icon: assets.figma,
     color: "#61DAFB",
     percentage: "80%",
+    offsetColor: "61DAFG",
   },
   {
     title: "React Native",
     icon: assets.figma,
     color: "#61DAFB",
     percentage: "70%",
+    offsetColor: "61DAFG",
   },
-  { title: "Node Js", icon: assets.figma, color: "#61DAFB", percentage: "70%" },
+  {
+    title: "Node Js",
+    icon: assets.figma,
+    color: "#61DAFB",
+    percentage: "70%",
+    offsetColor: "61DAFG",
+  },
   {
     title: "Express Js",
     icon: assets.figma,
     color: "#61DAFB",
     percentage: "70%",
+    offsetColor: "61DAFG",
   },
   {
     title: "Storybook",
     icon: assets.figma,
     percentage: "70%",
     color: "#61DAFB",
+    offsetColor: "61DAFG",
   },
   {
     title: "MongoDB",
     icon: assets.figma,
     percentage: "70%",
     color: "#61DAFB",
+    offsetColor: "61DAFG",
   },
   {
     title: "Git",
     icon: assets.figma,
     percentage: "70%",
     color: "#61DAFB",
+    offsetColor: "61DAFG",
   },
   {
     title: "Jira",
     icon: assets.figma,
     percentage: "70%",
     color: "#61DAFB",
+    offsetColor: "61DAFG",
   },
   {
     title: "Postman",
     icon: assets.figma,
     percentage: "70%",
     color: "#61DAFB",
+    offsetColor: "61DAFG",
   },
 ];
 

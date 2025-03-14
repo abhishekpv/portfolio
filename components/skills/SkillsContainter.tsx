@@ -1,24 +1,53 @@
 import { skills } from "@/assets/assets";
-import { StaticImageData } from "next/image";
-
-type SkillCardProps={
-    icon:StaticImageData;
-    title:string;
-    color:string;
-    percentage:string;
-}
-
-const SkillCard=({title}:SkillCardProps)=>{
-    return <div className="border  p-5 rounded-lg">{title}</div>
-}
+import SkillCard from "./SkillCard";
+import { useEffect, useMemo, useState } from "react";
 
 const SkillsContainter = () => {
+  const [isShowMore, setIsShowMore] = useState(false);
+
+  const formattedSkills = useMemo(() => {
+    if (isShowMore) return skills;
+    return skills.slice(0, 6);
+  }, [isShowMore]);
+
+  const handleResize = () => {
+    if (window.innerWidth > 768) {
+      setIsShowMore(true);
+    } else {
+      setIsShowMore(false);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   return (
-    <ul className="flex items-center justify-start flex-wrap gap-10 max-w-5xl mx-auto">
-      {skills.map(({ icon, title,color,percentage }) => {
-        return <SkillCard key={title} icon={icon} title={title} color={color} percentage={percentage} />;
-      })}
-    </ul>
+    <>
+      <ul className="grid xl:grid-cols-5 2xl:grid-cols-6 lg:grid-cols-4 md:grid-cols-3 grid-cols-2 flex-wrap gap-5 max-w-6xl mx-auto">
+        {formattedSkills.map(
+          ({ icon, title, color, percentage, offsetColor }) => {
+            return (
+              <SkillCard
+                key={title}
+                icon={icon}
+                title={title}
+                color={color}
+                offsetColor={offsetColor}
+                percentage={percentage}
+              />
+            );
+          }
+        )}
+      </ul>
+      <button
+        className="w-max mx-auto mt-10 md:hidden py-1 px-8 flex items-center justify-between gap-2 bg-white dark:bg-transparent border dark:text-white dark:border-white/50 duration-300 text-black rounded-full"
+        onClick={() => setIsShowMore(!isShowMore)}
+      >
+        {isShowMore ? "Show Less" : "Show More"}
+      </button>
+    </>
   );
 };
 
