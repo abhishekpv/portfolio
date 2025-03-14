@@ -39,6 +39,7 @@ import right_arrow_bold_dark from "./right-arrow-bold-dark.png";
 import open_link_black from "./open-link-black.png";
 import open_link_white from "./open-link-white.png";
 import qburst from "./qburst.png";
+import { color } from "motion/react";
 
 export const assets = {
   user_image,
@@ -86,25 +87,25 @@ export const assets = {
 
 export const workData = [
   {
-    id:1001,
+    id: 1001,
     title: "KIF Products",
     description: "Web app",
     bgImage: "/kifproducts.png",
   },
   {
-    id:1002,
+    id: 1002,
     title: "TripCast",
     description: "Mobile App",
     bgImage: "/tripcast.png",
   },
   {
-    id:1003,
+    id: 1003,
     title: "Lucky Check",
     description: "Mobile App",
     bgImage: "/luckyCheck.png",
   },
   {
-    id:1004,
+    id: 1004,
     title: "Papoteur",
     description: "Web app",
     bgImage: "/papoteur.png",
@@ -219,6 +220,100 @@ export const navItems = [
     label: "Contact",
     href: "#contact",
     class: "",
+  },
+];
+
+export const skills = [
+  {
+    title: "React Js",
+    icon: assets.figma,
+    percentage: "90%",
+    color: "#61DAFB",
+  },
+  {
+    title: "Next Js",
+    icon: assets.figma,
+    percentage: "80%",
+    color: "#61DAFB",
+  },
+  {
+    title: "HTML",
+    icon: assets.figma,
+    percentage: "90%",
+    color: "#61DAFB",
+  },
+  {
+    title: "CSS",
+    icon: assets.figma,
+    percentage: "90%",
+    color: "#61DAFB",
+  },
+  {
+    title: "JavaScript",
+    icon: assets.figma,
+    percentage: "90%",
+    color: "#61DAFB",
+  },
+  {
+    title: "TypeScript",
+    icon: assets.figma,
+    percentage: "80%",
+    color: "#61DAFB",
+  },
+  {
+    title: "Redux Tool Kit",
+    icon: assets.figma,
+    color: "#61DAFB",
+    percentage: "80%",
+  },
+  {
+    title: "Tailwind CSS",
+    icon: assets.figma,
+    color: "#61DAFB",
+    percentage: "80%",
+  },
+  {
+    title: "React Native",
+    icon: assets.figma,
+    color: "#61DAFB",
+    percentage: "70%",
+  },
+  { title: "Node Js", icon: assets.figma, color: "#61DAFB", percentage: "70%" },
+  {
+    title: "Express Js",
+    icon: assets.figma,
+    color: "#61DAFB",
+    percentage: "70%",
+  },
+  {
+    title: "Storybook",
+    icon: assets.figma,
+    percentage: "70%",
+    color: "#61DAFB",
+  },
+  {
+    title: "MongoDB",
+    icon: assets.figma,
+    percentage: "70%",
+    color: "#61DAFB",
+  },
+  {
+    title: "Git",
+    icon: assets.figma,
+    percentage: "70%",
+    color: "#61DAFB",
+  },
+  {
+    title: "Jira",
+    icon: assets.figma,
+    percentage: "70%",
+    color: "#61DAFB",
+  },
+  {
+    title: "Postman",
+    icon: assets.figma,
+    percentage: "70%",
+    color: "#61DAFB",
   },
 ];
 

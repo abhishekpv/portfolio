@@ -1,5 +1,6 @@
 import React from "react";
 import SectionHeader from "../SectionHeader";
+import SkillsContainter from "./SkillsContainter";
 
 const Skills = () => {
   return (
@@ -13,9 +14,7 @@ const Skills = () => {
         description="Crafting seamless and high-performance web experiences with modern
         technologies."
       />
-      <p className="text-center my-40 text-lg text-red-600 ">
-        Section under development
-      </p>
+      <SkillsContainter />
     </div>
   );
 };
