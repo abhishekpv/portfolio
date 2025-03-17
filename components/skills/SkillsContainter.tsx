@@ -4,6 +4,7 @@ import { useEffect, useMemo, useState } from "react";
 
 const SkillsContainter = () => {
   const [isShowMore, setIsShowMore] = useState(true);
+  const [isMobile, setIsMobile] = useState(false);
 
   const formattedSkills = useMemo(() => {
     if (isShowMore) return skills;
@@ -12,11 +13,19 @@ const SkillsContainter = () => {
 
   const handleResize = () => {
     if (window.innerWidth > 768) {
-      setIsShowMore(true);
+      setIsMobile(false);
     } else {
-      setIsShowMore(false);
+      setIsMobile(true);
     }
   };
+
+  useEffect(() => {
+    if (isMobile) {
+      setIsShowMore(false);
+    } else {
+      setIsShowMore(true);
+    }
+  }, [isMobile]);
 
   useEffect(() => {
     window.addEventListener("resize", handleResize);
