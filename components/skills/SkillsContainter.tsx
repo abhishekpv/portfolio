@@ -37,13 +37,14 @@ const SkillsContainter = () => {
     <>
       <ul className="grid xl:grid-cols-5 2xl:grid-cols-6 lg:grid-cols-4 md:grid-cols-3 grid-cols-2 flex-wrap gap-5 max-w-6xl mx-auto">
         {formattedSkills.map(
-          ({ icon, title, color, percentage, offsetColor }) => {
+          ({ icon, title, color, percentage, offsetColor, blackIcon }) => {
             return (
               <SkillCard
                 key={title}
                 icon={icon}
                 title={title}
                 color={color}
+                blackIcon={blackIcon}
                 offsetColor={offsetColor}
                 percentage={percentage}
               />

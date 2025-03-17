@@ -8,6 +8,7 @@ import project_icon_dark from "./project-icon-dark.png";
 import vscode from "./vscode.png";
 import firebase from "./firebase.png";
 import figma from "./figma.png";
+import react_logo from "./react.png";
 import jira from "./Jira.png";
 import postman from "./postman.png";
 import storyBook from "./storybook.png";
@@ -39,11 +40,27 @@ import right_arrow_bold_dark from "./right-arrow-bold-dark.png";
 import open_link_black from "./open-link-black.png";
 import open_link_white from "./open-link-white.png";
 import qburst from "./qburst.png";
-import { color } from "motion/react";
-import { off } from "process";
+import nextjs from "./nextjs.png";
+import html_logo from "./html.png";
+import css_logo from "./css_logo.png";
+import javascript_logo from "./javascript_logo.png";
+import typescript_logo from "./typescript_logo.png";
+import express_logo from "./express_logo.png";
+import node_logo from "./nodejs_logo.png";
+import taliwind_logo from "./tailwind_logo.png";
+import redux_logo from "./redux_logo.png";
 
 export const assets = {
   user_image,
+  javascript_logo,
+  typescript_logo,
+  express_logo,
+  node_logo,
+  taliwind_logo,
+  redux_logo,
+  nextjs,
+  css_logo,
+  html_logo,
   qburst,
   code_icon,
   code_icon_dark,
@@ -81,6 +98,7 @@ export const assets = {
   ui_icon,
   graphics_icon,
   right_arrow,
+  react_logo,
   send_icon,
   right_arrow_bold,
   right_arrow_bold_dark,
@@ -90,26 +108,35 @@ export const workData = [
   {
     id: 1001,
     title: "KIF Products",
-    description: "Web app",
+    link: "https://kifproducts.com/",
+    tag: "Web app",
+    description: "this is a description",
+    techs: ["React Js", "Tailwind CSS"],
     bgImage: "/kifproducts.png",
   },
   {
     id: 1002,
     title: "TripCast",
-    description: "Mobile App",
+    link: "https://tripcast.in/",
+    description: "this is a description",
+    tag: "Mobile App",
     bgImage: "/tripcast.png",
   },
   {
     id: 1003,
     title: "Lucky Check",
-    description: "Mobile App",
+    link: "https://tripcast.in/",
+    description: "this is a description",
+    tag: "Mobile App",
     bgImage: "/luckyCheck.png",
   },
   {
     id: 1004,
-    title: "Papoteur",
-    description: "Web app",
-    bgImage: "/papoteur.png",
+    title: "Portfolio",
+    link: "https://tripcast.in/",
+    description: "this is a description",
+    tag: "Web app",
+    bgImage: "/portfolio.png",
   },
 ];
 
@@ -181,10 +208,10 @@ export const experienceData = [
         locationHref: "https://maps.app.goo.gl/VDedLTtuXk19HucU9",
         responsobilities: [
           "Improved unit test coverage from 40% to 90% by modularizing code and implementing comprehensive test scenarios, enhancing code reliability",
-"Reduced load times by 25% and improved maintainability by 20% through scalable frontend optimizations",
-"Increased form accuracy by 30% and reusability by implementing Formik for efficient form handling",
-"Strengthened security and enhanced user experience by introducing role-based access control, optimizing performance",
-"Ensured stable releases by resolving 100+ bugs, improving application efficiency and reliability",
+          "Reduced load times by 25% and improved maintainability by 20% through scalable frontend optimizations",
+          "Increased form accuracy by 30% and reusability by implementing Formik for efficient form handling",
+          "Strengthened security and enhanced user experience by introducing role-based access control, optimizing performance",
+          "Ensured stable releases by resolving 100+ bugs, improving application efficiency and reliability",
         ],
       },
     ],
@@ -227,113 +254,115 @@ export const navItems = [
 export const skills = [
   {
     title: "React Js",
-    icon: assets.figma,
-    percentage: "90%",
+    icon: assets.react_logo,
+    percentage: "95%",
     color: "#61DAFB",
     offsetColor: "61DAFG",
   },
   {
     title: "Next Js",
-    icon: assets.figma,
-    percentage: "80%",
+    icon: assets.nextjs,
+    blackIcon: true,
+    percentage: "90%",
     color: "#61DAFB",
     offsetColor: "61DAFG",
   },
   {
     title: "HTML",
-    icon: assets.figma,
-    percentage: "90%",
+    icon: assets.html_logo,
+    percentage: "95%",
     color: "#61DAFB",
     offsetColor: "61DAFG",
   },
   {
     title: "CSS",
-    icon: assets.figma,
-    percentage: "90%",
+    icon: assets.css_logo,
+    percentage: "95%",
     color: "#61DAFB",
     offsetColor: "61DAFG",
   },
   {
     title: "JavaScript",
-    icon: assets.figma,
-    percentage: "90%",
+    icon: assets.javascript_logo,
+    percentage: "95%",
     color: "#61DAFB",
     offsetColor: "61DAFG",
   },
   {
     title: "TypeScript",
     icon: assets.figma,
-    percentage: "80%",
+    percentage: "90%",
     color: "#61DAFB",
     offsetColor: "61DAFG",
   },
   {
     title: "Redux Tool Kit",
-    icon: assets.figma,
+    icon: assets.redux_logo,
     color: "#61DAFB",
-    percentage: "80%",
+    percentage: "85%",
     offsetColor: "61DAFG",
   },
   {
     title: "Tailwind CSS",
-    icon: assets.figma,
+    icon: assets.taliwind_logo,
     color: "#61DAFB",
-    percentage: "80%",
+    percentage: "95%",
     offsetColor: "61DAFG",
   },
   {
     title: "React Native",
-    icon: assets.figma,
+    icon: assets.react_logo,
     color: "#61DAFB",
     percentage: "70%",
     offsetColor: "61DAFG",
   },
   {
     title: "Node Js",
-    icon: assets.figma,
+    icon: assets.node_logo,
     color: "#61DAFB",
     percentage: "70%",
     offsetColor: "61DAFG",
   },
   {
     title: "Express Js",
-    icon: assets.figma,
+    icon: assets.express_logo,
+    blackIcon: true,
     color: "#61DAFB",
     percentage: "70%",
     offsetColor: "61DAFG",
   },
   {
     title: "Storybook",
-    icon: assets.figma,
+    icon: assets.storyBook,
     percentage: "70%",
     color: "#61DAFB",
     offsetColor: "61DAFG",
   },
   {
     title: "MongoDB",
-    icon: assets.figma,
+    icon: assets.mongodb,
     percentage: "70%",
     color: "#61DAFB",
     offsetColor: "61DAFG",
   },
   {
     title: "Git",
-    icon: assets.figma,
-    percentage: "70%",
+    icon: assets.git,
+    percentage: "90%",
     color: "#61DAFB",
     offsetColor: "61DAFG",
   },
   {
     title: "Jira",
-    icon: assets.figma,
-    percentage: "70%",
+    icon: assets.jira,
+    percentage: "85%",
     color: "#61DAFB",
     offsetColor: "61DAFG",
   },
   {
     title: "Postman",
-    icon: assets.figma,
-    percentage: "70%",
+    icon: assets.postman,
+    percentage: "85%",
     color: "#61DAFB",
     offsetColor: "61DAFG",
   },

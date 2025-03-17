@@ -12,7 +12,7 @@ const SkillSlider = ({
   colorEnd,
 }: SkillSliderProps) => {
   return (
-    <div className="w-full border-[0.5px] dark:border-gray-700 rounded overflow-hidden my-2">
+    <div className="w-full border-[0.5px] border-gray-300 dark:border-gray-700 rounded overflow-hidden my-2">
       <div
         className="h-1 rounded-full"
         style={{
