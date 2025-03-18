@@ -117,7 +117,7 @@ export const workData = [
   {
     id: 1002,
     title: "TripCast",
-    link: "https://tripcast.in/",
+    link: "https://github.com/abhishekpv/tripcast",
     description: "this is a description",
     tag: "Mobile App",
     bgImage: "/tripcast.png",
@@ -125,7 +125,7 @@ export const workData = [
   {
     id: 1003,
     title: "Lucky Check",
-    link: "https://tripcast.in/",
+    link: "https://github.com/abhishekpv/luckycheck",
     description: "this is a description",
     tag: "Mobile App",
     bgImage: "/luckyCheck.png",
@@ -133,7 +133,7 @@ export const workData = [
   {
     id: 1004,
     title: "Portfolio",
-    link: "https://tripcast.in/",
+    link: "https://github.com/abhishekpv/portfolio",
     description: "this is a description",
     tag: "Web app",
     bgImage: "/portfolio.png",
@@ -290,7 +290,7 @@ export const skills = [
   },
   {
     title: "TypeScript",
-    icon: assets.figma,
+    icon: assets.typescript_logo,
     percentage: "90%",
     color: "#61DAFB",
     offsetColor: "61DAFG",
