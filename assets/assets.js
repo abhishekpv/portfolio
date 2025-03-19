@@ -49,9 +49,13 @@ import express_logo from "./express_logo.png";
 import node_logo from "./nodejs_logo.png";
 import taliwind_logo from "./tailwind_logo.png";
 import redux_logo from "./redux_logo.png";
+import python_logo from './python.png'
+import langchain_logo from './langchain-color.svg'
 
 export const assets = {
   user_image,
+  langchain_logo,
+  python_logo,
   javascript_logo,
   typescript_logo,
   express_logo,
@@ -334,6 +338,19 @@ export const skills = [
     title: "Express Js",
     icon: assets.express_logo,
     blackIcon: true,
+    color: "#61DAFB",
+    percentage: "70%",
+    offsetColor: "61DAFG",
+  },
+  {
+    title: "Python",
+    icon: assets.python_logo,
+    color: "#61DAFB",
+    percentage: "70%",
+    offsetColor: "61DAFG",
+  },{
+    title: "LangChain",
+    icon: assets.langchain_logo,
     color: "#61DAFB",
     percentage: "70%",
     offsetColor: "61DAFG",
