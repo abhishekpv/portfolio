@@ -1,5 +1,6 @@
 import { assets, workData } from "@/assets/assets";
 import Image from "next/image";
+import WorkTechStack from "./WorkTechStack";
 
 const WorkContainer = () => {
   return (
@@ -23,21 +24,21 @@ const WorkContainer = () => {
             <div className="px-3 py-1  flex items-center justify-between w-full">
               <h3 className="text-lg font-semibold duration-200 text-black dark:text-white flex items-center  gap-2">
                 {project.title}
-                <Image
-                  src={assets.open_link_black}
-                  alt="external-link"
-                  className="h-3 w-3 min-w-3 cursor-pointer dark:invert"
-                />
+                <a href={project.link} target="_blank">
+                  <Image
+                    src={assets.open_link_black}
+                    alt="external-link"
+                    className="h-3 w-3 min-w-3 cursor-pointer dark:invert"
+                  />
+                </a>
               </h3>
               <p className="text-gray-500 dark:text-gray-400 text-xs">
-                {project.description}
+                {project.tag}
               </p>
             </div>
-            <p className="px-3 text-sm text-justify text-gray-800 dark:text-gray-300 py-2">
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Autem
-              corporis ullam ratione corrupti officia soluta, deserunt enim
-              impedit cumque, tenetur fugit magni ipsa nemo? Cum nihil accusamus
-              nisi corrupti quisquam!
+            <WorkTechStack techStack={project.techs}/>
+            <p className="px-3 text-sm text-justify text-gray-800 dark:text-gray-300 py-2 mb-2">
+              {project.description}
             </p>
           </div>
         );

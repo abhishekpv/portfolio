@@ -110,32 +110,39 @@ export const workData = [
     title: "KIF Products",
     link: "https://kifproducts.com/",
     tag: "Web app",
-    description: "this is a description",
-    techs: ["React Js", "Tailwind CSS"],
+    description:
+      "Live Product Listing Website built using ReactJS for the frontend and Node.js/Express.js for the backend, with MySQL as the database. It is designed to display product listings for various companies under the KIF umbrella, ensuring a seamless and high-performance user experience",
+    techs: ["React Js", "Tailwind CSS", "Node Js", "Express Js", "MySQL"],
     bgImage: "/kifproducts.png",
   },
   {
     id: 1002,
     title: "TripCast",
     link: "https://github.com/abhishekpv/tripcast",
-    description: "this is a description",
+    description:
+      "AI-powered travel app, built with React Native, Gemini API, Redux Toolkit, and Tailwind CSS, generates personalized itineraries, adapts plans based on real-time weather, and highlights key attractions. It offers a seamless, responsive, and intelligent travel experience with dynamic updates and a modern UI.",
     tag: "Mobile App",
+    techs: ["React Native", "Redux Toolkit", "Tailwind CSS", "Gemini API"],
     bgImage: "/tripcast.png",
   },
   {
     id: 1003,
     title: "Lucky Check",
     link: "https://github.com/abhishekpv/luckycheck",
-    description: "this is a description",
+    description:
+      "React Native application utilizes Cheerio, Node.js, and Express.js to scrape and display real-time Kerala lottery results. It fetches winner details directly from the official lottery website, allowing users to check their ticket status and prize amounts instantly. Designed for efficiency and ease of use, the app ensures a seamless experience with quick data retrieval and a user-friendly interface. ",
     tag: "Mobile App",
+    techs: ["React Native", "Node Js", "Express Js", "Cheerio"],
     bgImage: "/luckyCheck.png",
   },
   {
     id: 1004,
     title: "Portfolio",
     link: "https://github.com/abhishekpv/portfolio",
-    description: "this is a description",
+    description:
+      "Portfolio website built with Next.js, Tailwind CSS, and Framer Motion, offers a fast, responsive, and visually engaging experience. It showcases projects, skills, and achievements with smooth animations, optimized performance, and a modern design for a professional online presence.",
     tag: "Web app",
+    techs: ["Next Js", "Tailwind CSS", "Framer Motion"],
     bgImage: "/portfolio.png",
   },
 ];
