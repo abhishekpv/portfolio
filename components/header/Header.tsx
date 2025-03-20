@@ -1,5 +1,8 @@
 import { assets } from "@/assets/assets";
 import Image from "next/image";
+import { motion } from "motion/react";
+import Greeting from "./Greeting";
+import HeroButtons from "./HeroButtons";
 
 const Header = () => {
   return (
@@ -7,46 +10,37 @@ const Header = () => {
       id="top"
       className="w-full max-w-3xl text-center mx-auto h-screen flex flex-col items-center justify-center gap-4"
     >
-      <div className="w-32 aspect-square overflow-hidden rounded-full">
+      <motion.div
+        initial={{ scale: 0 }}
+        whileInView={{ scale: 1 }}
+        transition={{ duration: 0.8, type: "spring", stiffness: 100 }}
+        className="w-32 aspect-square overflow-hidden rounded-full"
+      >
         <Image
           className="w-32 -mt-6"
           src={assets.user_image}
           alt="profile-img"
         />
-      </div>
-      <h3 className="text-xl md:text-2xl mb-3 font-Ovo">
-        Hi! I am Abhishek P V
-      </h3>
-      <h1 className="text-3xl sm:text-6xl font-Ovo">frontend web developer</h1>
-      <p className="max-w-2xl mx-auto font-Ovo px-1">
+      </motion.div>
+      <Greeting />
+      <motion.h1
+        initial={{ y: -20, opacity: 0 }}
+        whileInView={{ y: 0, opacity: 1 }}
+        transition={{ duration: 0.6, delay: 0.3 }}
+        className="text-3xl sm:text-6xl font-Ovo"
+      >
+        frontend web developer
+      </motion.h1>
+      <motion.p
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 0.6, delay: 0.6 }}
+        className="max-w-2xl mx-auto font-Ovo px-1"
+      >
         I am a frontend developer from Kerala, India, with over a year of
         experience building dynamic and user-friendly web applications.
-      </p>
-      <div className="flex flex-col sm:flex-row items-center gap-4 mt-4">
-        <a
-          href="#contact"
-          className="px-8 py-3 rounded-full border duration-200 border-white dark:border-gray-500 bg-black dark:bg-transparent text-white flex items-center gap-2"
-        >
-          connect with me
-          <Image
-            src={assets.right_arrow_white}
-            className="w-4"
-            alt="right-arrow"
-          />
-        </a>
-        <a
-          href="/abhishek-sde-cv.pdf"
-          download
-          className="px-10 py-3 rounded-full duration-200 border border-gray-500 dark:border-black bg-white text-black flex items-center gap-2"
-        >
-          my resume
-          <Image
-            src={assets.download_icon}
-            className="w-4"
-            alt="download-icon"
-          />
-        </a>
-      </div>
+      </motion.p>
+      <HeroButtons />
     </div>
   );
 };
