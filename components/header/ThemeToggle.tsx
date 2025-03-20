@@ -3,6 +3,7 @@
 import { assets } from "@/assets/assets";
 import Image from "next/image";
 import React, { useEffect, useLayoutEffect, useState } from "react";
+import { motion, useCycle } from "motion/react";
 
 const ThemeToggle = () => {
   const [isDarkMode, setIsDarkMode] = useState(false);
@@ -28,14 +29,21 @@ const ThemeToggle = () => {
     setIsDarkMode((prev) => !prev);
   };
 
+  const [animate, cycle] = useCycle({ rotate: 0 }, { rotate: 360 });
+
   return (
-    <button onClick={toggleTheme} className="focus:outline-none">
+    <motion.button
+      animate={animate}
+      onTap={() => cycle()}
+      onClick={toggleTheme}
+      className="focus:outline-none"
+    >
       <Image
         alt="theme-moon"
         src={isDarkMode ? assets.sun_icon : assets.moon_icon}
         className="w-6"
       />
-    </button>
+    </motion.button>
   );
 };
 
