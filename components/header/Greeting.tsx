@@ -17,7 +17,7 @@ const Greeting = () => {
       repeat: Infinity,
       repeatType: "reverse",
       repeatDelay: 2.5,
-      delay: 1,
+      delay: 0.5,
       ease: "easeInOut",
     });
     return controls.stop;
