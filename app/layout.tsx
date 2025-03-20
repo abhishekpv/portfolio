@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Outfit, Ovo } from "next/font/google";
 import "./globals.css";
 import Head from "next/head";
+import { Analytics } from "@vercel/analytics/react";
 
 const outfit = Outfit({
   subsets: ["latin"],
@@ -26,12 +27,13 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth ">
       <Head>
-      <link rel="icon" href="/favicon.png" sizes="any" />
+        <link rel="icon" href="/favicon.png" sizes="any" />
       </Head>
       <body
         className={`min-h-screen relative ${outfit.className} ${ovo.className} antialiased leading-8 overflow-x-hidden dark:bg-darkTheme dark:text-white`}
       >
         {children}
+        <Analytics />
       </body>
     </html>
   );
