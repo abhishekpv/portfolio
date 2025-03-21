@@ -30,7 +30,7 @@ const ContactForm = () => {
 
     formData.append(
       "access_key",
-      process.env.NEXT_PUBLIC_WEB3FORM_ACCESS_KEY ?? "",
+      process.env.NEXT_PUBLIC_WEB3FORM_ACCESS_KEY ?? ""
     );
 
     const response = await fetch("https://api.web3forms.com/submit", {
@@ -62,11 +62,11 @@ const ContactForm = () => {
           <motion.input
             onMouseEnter={() => setCursorType("textNormal")}
             onMouseLeave={() => setCursorType("default")}
-            initial={{ opacity: 0, x: index % 2 ? 50 : -50 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
             transition={{
               duration: 0.5,
-              delay: index % 2 ? 0.9 : 0.7,
+              delay: index % 2 ? 0.3 : 0.2,
             }}
             key={field.name}
             name={field.name}
@@ -82,7 +82,7 @@ const ContactForm = () => {
         onMouseLeave={() => setCursorType("default")}
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5, delay: 0.6 }}
+        transition={{ duration: 0.5, delay: 0.4 }}
         placeholder="Your message"
         rows={6}
         name="message"
