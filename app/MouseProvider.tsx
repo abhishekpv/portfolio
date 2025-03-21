@@ -37,6 +37,7 @@ const MouseProvider = ({ children }: MouseProviderProps) => {
       y: mousePosition.y - 8,
       width: 16,
       height: 16,
+      backgroundColor: "rgb(0 0 0 / 0.4)",
     },
     pointer: {
       x: mousePosition.x - 15,
@@ -65,11 +66,19 @@ const MouseProvider = ({ children }: MouseProviderProps) => {
   return (
     <>
       <motion.div
-        className="cursor duration-100 fixed w-4 h-4 bg-pink-500/50 border border-pink-500 rounded-full pointer-events-none "
+        className="cursor fixed w-4 h-4 rounded-full pointer-events-none "
         style={{ zIndex: 1000 }}
         variants={variants}
         animate={cursorType}
-        transition={{ type: "spring", duration: 0 }}
+        transition={{
+          type: "spring",
+          duration: 0,
+          width: { duration: 0.15 },
+          height: { duration: 0.15 },
+          backgroundColor: { duration: 0.15 },
+          borderColor: { duration: 0.15 },
+          default: { duration: 0 },
+        }}
       ></motion.div>
       <MouseContext.Provider value={{ setCursorType }}>
         {children}

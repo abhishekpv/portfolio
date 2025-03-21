@@ -1,6 +1,8 @@
 import { assets } from "@/assets/assets";
 import Image from "next/image";
-import { FormEvent, useState } from "react";
+import { FormEvent, useContext, useState } from "react";
+import { motion } from "motion/react";
+import { MouseContext } from "@/app/MouseProvider";
 
 const fields = [
   {
@@ -19,6 +21,7 @@ const fields = [
 
 const ContactForm = () => {
   const [result, setResult] = useState("");
+  const { setCursorType } = useContext(MouseContext);
 
   const onSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
@@ -47,10 +50,25 @@ const ContactForm = () => {
   };
 
   return (
-    <form onSubmit={onSubmit} className="max-w-2xl mx-auto">
+    <motion.form
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      transition={{ duration: 0.5, delay: 0.5, type: "tween" }}
+      onSubmit={onSubmit}
+      className="max-w-2xl mx-auto"
+    >
       <div className="grid grid-cols-1 gap-6 mt-10 md:grid-cols-2">
-        {fields.map((field) => (
-          <input
+        {fields.map((field, index) => (
+          <motion.input
+            onMouseEnter={() => setCursorType("textNormal")}
+            onMouseLeave={() => setCursorType("default")}
+            initial={{ opacity: 0, x: index % 2 ? 50 : -50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{
+              duration: 0.6,
+              type: "tween",
+              delay: index % 2 ? 0.9 : 0.7,
+            }}
             key={field.name}
             name={field.name}
             type={field.type}
@@ -60,16 +78,26 @@ const ContactForm = () => {
           />
         ))}
       </div>
-      <textarea
+      <motion.textarea
+        onMouseEnter={() => setCursorType("textNormal")}
+        onMouseLeave={() => setCursorType("default")}
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, delay: 1, type: "tween" }}
         placeholder="Your message"
         rows={6}
         name="message"
         required
         className="w-full p-3 border border-gray-200 dark:bg-darkHover/30 dark:border-white/50 dark:focus:border-white rounded-md  outline-none focus:border-gray-500 duration-300 my-6"
       />
-      <button
+      <motion.button
+        onMouseEnter={() => setCursorType("pointer")}
+        onMouseLeave={() => setCursorType("default")}
+        initial={{ scale: 1 }}
+        whileHover={{ scale: 1.05 }}
+        transition={{ type: "spring", duration: 0.1 }}
         type="submit"
-        className="w-max mx-auto py-3 px-8 flex items-center justify-between gap-2 bg-black/80 hover:bg-black dark:bg-transparent dark:hover:bg-darkHover dark:border dark:border-white/50 duration-300 text-white rounded-full"
+        className="w-max mx-auto cursor-none py-3 px-8 flex items-center justify-between gap-2 bg-black/80 hover:bg-black dark:bg-transparent dark:hover:bg-darkHover dark:border dark:border-white/50 duration-300 text-white rounded-full"
       >
         Submit now
         <Image
@@ -77,9 +105,9 @@ const ContactForm = () => {
           src={assets.right_arrow_white}
           className="w-4 mt-1"
         />
-      </button>
+      </motion.button>
       <p className="mt-4">{result}</p>
-    </form>
+    </motion.form>
   );
 };
 
