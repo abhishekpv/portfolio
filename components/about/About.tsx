@@ -57,7 +57,7 @@ const About = () => {
           <motion.ul
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
-            transition={{ duration: 0.8, delay: 1 }}
+            transition={{ duration: 0.8, delay: 0.5 }}
             className="flex gap-6 max-xl:flex-wrap max-w-3xl "
           >
             <TechStack />
@@ -68,7 +68,7 @@ const About = () => {
             onMouseLeave={() => setCursorType("default")}
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.6 }}
+            transition={{ duration: 0.5, delay: 0.3 }}
             className="mt-6 mb-3 text-gray-700 font-Ovo"
           >
             Tools I use
