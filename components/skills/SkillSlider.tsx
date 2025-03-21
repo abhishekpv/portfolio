@@ -1,5 +1,3 @@
-import React from "react";
-
 interface SkillSliderProps {
   percentage: string;
   colorStart: string;

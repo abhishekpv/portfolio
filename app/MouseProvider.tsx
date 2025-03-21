@@ -8,7 +8,9 @@ type MouseProviderProps = {
 };
 
 export const MouseContext = createContext({
-  setCursorType: (cursorType: string) => {
+  setCursorType: (
+    cursorType: "default" | "pointer" | "textLarge" | "textNormal"
+  ) => {
     if (cursorType) {
     }
   },
@@ -23,7 +25,7 @@ const MouseProvider = ({ children }: MouseProviderProps) => {
       setMousePosition({ x: event.clientX, y: event.clientY });
     };
     window.addEventListener("mousemove", handleMouseMove);
-    
+
     return () => {
       window.removeEventListener("mousemove", handleMouseMove);
     };
