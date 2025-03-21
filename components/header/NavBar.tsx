@@ -1,13 +1,15 @@
 import Image from "next/image";
 import { assets } from "@/assets/assets";
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import NavLinks from "./NavLinks";
 import MobileNavBar from "./MobileNavBar";
 import ThemeToggle from "./ThemeToggle";
+import { MouseContext } from "@/app/MouseProvider";
 
 const NavBar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScroll, setIsScroll] = useState(false);
+  const { setCursorType } = useContext(MouseContext);
 
   const openMenuBar = () => {
     setIsMenuOpen(true);
@@ -50,7 +52,9 @@ const NavBar = () => {
       >
         <a
           href="#top"
-          className="w-28 text-3xl cursor-pointer whitespace-nowrap font-medium mr-16"
+          onMouseEnter={() => setCursorType("pointer")}
+          onMouseLeave={() => setCursorType("default")}
+          className="w-28 text-3xl whitespace-nowrap font-medium mr-16"
         >
           Abhishek<span className="text-pink-600 text-4xl">.</span>
         </a>
@@ -66,6 +70,8 @@ const NavBar = () => {
         <div className="flex items-center gap-4">
           <ThemeToggle />
           <a
+            onMouseEnter={() => setCursorType("pointer")}
+            onMouseLeave={() => setCursorType("default")}
             href="/abhishek-sde-cv.pdf"
             download
             className="hidden font-Ovo lg:flex items-center text-black dark:text-white gap-3 px-10 py-2.5 border border-gray-500 rounded-full ml-4 duration-200 hover:shadow-sm dark:hover:border-white/70 hover:border-gray-800 "

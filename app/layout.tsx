@@ -3,6 +3,7 @@ import { Outfit, Ovo } from "next/font/google";
 import "./globals.css";
 import Head from "next/head";
 import { Analytics } from "@vercel/analytics/react";
+import MouseProvider from "./MouseProvider";
 
 const outfit = Outfit({
   subsets: ["latin"],
@@ -32,8 +33,10 @@ export default function RootLayout({
       <body
         className={`min-h-screen relative ${outfit.className} ${ovo.className} antialiased leading-8 overflow-x-hidden dark:bg-darkTheme dark:text-white`}
       >
-        {children}
-        <Analytics />
+        <MouseProvider>
+          {children}
+          <Analytics />
+        </MouseProvider>
       </body>
     </html>
   );

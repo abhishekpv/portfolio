@@ -3,8 +3,12 @@ import Image from "next/image";
 import { motion } from "motion/react";
 import Greeting from "./Greeting";
 import HeroButtons from "./HeroButtons";
+import { MouseContext } from "@/app/MouseProvider";
+import { useContext } from "react";
 
 const Header = () => {
+  const { setCursorType } = useContext(MouseContext);
+
   return (
     <div
       id="top"
@@ -24,6 +28,8 @@ const Header = () => {
       </motion.div>
       <Greeting />
       <motion.h1
+        onMouseEnter={() => setCursorType("textLarge")}
+        onMouseLeave={() => setCursorType("default")}
         initial={{ y: -20, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.6, delay: 0.3 }}
@@ -32,6 +38,8 @@ const Header = () => {
         frontend web developer
       </motion.h1>
       <motion.p
+      onMouseEnter={() => setCursorType("textNormal")}
+      onMouseLeave={() => setCursorType("default")}
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ duration: 0.6, delay: 0.6 }}

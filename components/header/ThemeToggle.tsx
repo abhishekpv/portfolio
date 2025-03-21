@@ -2,11 +2,13 @@
 
 import { assets } from "@/assets/assets";
 import Image from "next/image";
-import React, { useEffect, useLayoutEffect, useState } from "react";
+import React, { useContext, useEffect, useLayoutEffect, useState } from "react";
 import { motion, useCycle } from "motion/react";
+import { MouseContext } from "@/app/MouseProvider";
 
 const ThemeToggle = () => {
   const [isDarkMode, setIsDarkMode] = useState(false);
+  const { setCursorType } = useContext(MouseContext);
 
   useLayoutEffect(() => {
     const theme = window.localStorage.getItem("theme");
@@ -33,6 +35,8 @@ const ThemeToggle = () => {
 
   return (
     <motion.button
+      onMouseEnter={() => setCursorType("pointer")}
+      onMouseLeave={() => setCursorType("default")}
       animate={animate}
       onTap={() => cycle()}
       onClick={toggleTheme}

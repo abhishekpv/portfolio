@@ -1,11 +1,17 @@
 import { assets } from "@/assets/assets";
 import Image from "next/image";
 import { motion } from "motion/react";
+import { useContext } from "react";
+import { MouseContext } from "@/app/MouseProvider";
 
 const HeroButtons = () => {
+  const { setCursorType } = useContext(MouseContext);
+
   return (
     <div className="flex flex-col sm:flex-row items-center gap-4 mt-4">
       <motion.a
+        onMouseEnter={() => setCursorType("pointer")}
+        onMouseLeave={() => setCursorType("default")}
         initial={{ y: 30, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.6, delay: 0.8 }}
@@ -20,6 +26,8 @@ const HeroButtons = () => {
         />
       </motion.a>
       <motion.a
+        onMouseEnter={() => setCursorType("pointer")}
+        onMouseLeave={() => setCursorType("default")}
         initial={{ y: 30, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.6, delay: 1 }}
