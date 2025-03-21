@@ -1,7 +1,7 @@
 import React from "react";
 import ExperienceBody from "./ExperienceBody";
 import SectionHeader from "../SectionHeader";
-import {motion} from 'motion/react';
+import { motion } from "motion/react";
 
 const Experience = () => {
   return (

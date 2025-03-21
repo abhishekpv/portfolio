@@ -49,8 +49,8 @@ import express_logo from "./express_logo.png";
 import node_logo from "./nodejs_logo.png";
 import taliwind_logo from "./tailwind_logo.png";
 import redux_logo from "./redux_logo.png";
-import python_logo from './python.png'
-import langchain_logo from './langchain-color.svg'
+import python_logo from "./python.png";
+import langchain_logo from "./langchain-color.svg";
 
 export const assets = {
   user_image,
@@ -348,7 +348,8 @@ export const skills = [
     color: "#61DAFB",
     percentage: "70%",
     offsetColor: "61DAFG",
-  },{
+  },
+  {
     title: "LangChain",
     icon: assets.langchain_logo,
     color: "#61DAFB",

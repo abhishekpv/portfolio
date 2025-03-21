@@ -38,8 +38,8 @@ const Header = () => {
         frontend web developer
       </motion.h1>
       <motion.p
-      onMouseEnter={() => setCursorType("textNormal")}
-      onMouseLeave={() => setCursorType("default")}
+        onMouseEnter={() => setCursorType("textNormal")}
+        onMouseLeave={() => setCursorType("default")}
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ duration: 0.6, delay: 0.6 }}

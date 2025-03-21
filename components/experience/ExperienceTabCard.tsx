@@ -53,9 +53,9 @@ const ExperienceTabCard = ({
         />
       </div>
       <motion.div
-      initial={{x:70,}}
-      whileInView={{x:0,}}
-      transition={{delay:1, duration:0.6, type:'tween'}}
+        initial={{ x: 70 }}
+        whileInView={{ x: 0 }}
+        transition={{ delay: 1, duration: 0.6, type: "tween" }}
         className={`left-full ml-2 h-0.5 w-24 hidden md:block  duration-500 top-4 bg-gradient-to-l from-gray-500 -z-10 to-transparent   absolute ${
           selected ? "" : "translate-x-28"
         }`}

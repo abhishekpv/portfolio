@@ -30,7 +30,7 @@ const ContactForm = () => {
 
     formData.append(
       "access_key",
-      process.env.NEXT_PUBLIC_WEB3FORM_ACCESS_KEY ?? ""
+      process.env.NEXT_PUBLIC_WEB3FORM_ACCESS_KEY ?? "",
     );
 
     const response = await fetch("https://api.web3forms.com/submit", {

@@ -9,7 +9,7 @@ type MouseProviderProps = {
 
 export const MouseContext = createContext({
   setCursorType: (
-    cursorType: "default" | "pointer" | "textLarge" | "textNormal"
+    cursorType: "default" | "pointer" | "textLarge" | "textNormal",
   ) => {
     if (cursorType) {
     }

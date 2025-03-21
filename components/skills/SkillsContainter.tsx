@@ -3,7 +3,6 @@ import SkillCard from "./SkillCard";
 import { useEffect, useMemo, useState } from "react";
 import { motion } from "motion/react";
 
-
 const SkillsContainter = () => {
   const [isShowMore, setIsShowMore] = useState(true);
   const [isMobile, setIsMobile] = useState(false);
@@ -38,12 +37,16 @@ const SkillsContainter = () => {
   return (
     <>
       <motion.ul
-      initial={{opacity:0, y:30}}
-      whileInView={{opacity:1,y:0}}
-      transition={{delay:0.6,duration:0.5}}
-      className=" grid xl:grid-cols-5 2xl:grid-cols-6 lg:grid-cols-4 md:grid-cols-3 grid-cols-2 flex-wrap gap-5 max-w-6xl mx-auto">
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.6, duration: 0.5 }}
+        className=" grid xl:grid-cols-5 2xl:grid-cols-6 lg:grid-cols-4 md:grid-cols-3 grid-cols-2 flex-wrap gap-5 max-w-6xl mx-auto"
+      >
         {formattedSkills.map(
-          ({ icon, title, color, percentage, offsetColor, blackIcon },index) => {
+          (
+            { icon, title, color, percentage, offsetColor, blackIcon },
+            index,
+          ) => {
             return (
               <SkillCard
                 key={title}
@@ -56,7 +59,7 @@ const SkillsContainter = () => {
                 percentage={percentage}
               />
             );
-          }
+          },
         )}
       </motion.ul>
       <button
