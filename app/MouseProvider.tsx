@@ -9,7 +9,7 @@ type MouseProviderProps = {
 
 export const MouseContext = createContext({
   setCursorType: (
-    cursorType: "default" | "pointer" | "textLarge" | "textNormal",
+    cursorType: "default" | "pointer" | "textLarge" | "textNormal"
   ) => {
     if (cursorType) {
     }
@@ -69,7 +69,7 @@ const MouseProvider = ({ children }: MouseProviderProps) => {
   return (
     <>
       <motion.div
-        className="cursor fixed w-4 h-4 border border-white/75 rounded-full pointer-events-none "
+        className="cursor sm:hidden fixed w-4 h-4 border border-white/75 rounded-full pointer-events-none "
         style={{ zIndex: 1000 }}
         variants={variants}
         animate={cursorType}
