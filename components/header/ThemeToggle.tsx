@@ -37,6 +37,8 @@ const ThemeToggle = () => {
     <motion.button
       onMouseEnter={() => setCursorType("pointer")}
       onMouseLeave={() => setCursorType("default")}
+      initial={{ scale: 1 }}
+      whileHover={{ scale: 1.6 }}
       animate={animate}
       onTap={() => cycle()}
       onClick={toggleTheme}

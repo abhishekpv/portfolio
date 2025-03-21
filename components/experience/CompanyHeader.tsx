@@ -1,5 +1,9 @@
 import { assets } from "@/assets/assets";
 import Image from "next/image";
+import { MouseContext } from "@/app/MouseProvider";
+import { motion } from "motion/react";
+import { useContext } from "react";
+
 type CompanyHeaderProps = {
   companyName: string;
   startDate: string;
@@ -12,12 +16,24 @@ const CompanyHeader = ({
   companyName,
   endDate,
 }: CompanyHeaderProps) => {
+  const { setCursorType } = useContext(MouseContext);
+
   return (
     <>
       <div className="flex text-xl max-md:text-center text-nowrap items-center gap-2">
-        <h3 className="w-full">{companyName}</h3>
-        <a
-          className="hidden md:block hover:scale-110 w-full"
+        <h3
+          onMouseEnter={() => setCursorType("textNormal")}
+          onMouseLeave={() => setCursorType("default")}
+          className="w-fit"
+        >
+          {companyName}
+        </h3>
+        <motion.a
+          onMouseEnter={() => setCursorType("pointer")}
+          onMouseLeave={() => setCursorType("default")}
+          initial={{ rotate: 360, scale: 1 }}
+          whileHover={{ rotate: 0, scale: 1.5 }}
+          className="hidden md:flex items-center w-fit justify-center hover:scale-110"
           href={companyLink}
           target="_blank"
           onClick={(e) => {
@@ -29,9 +45,15 @@ const CompanyHeader = ({
             alt={"open link"}
             src={assets.open_link_black}
           />
-        </a>
+        </motion.a>
       </div>
-      <p className="text-xs text-nowrap mt-1">{startDate + " - " + endDate}</p>
+      <p
+        onMouseEnter={() => setCursorType("textNormal")}
+        onMouseLeave={() => setCursorType("default")}
+        className="text-xs text-nowrap mt-1"
+      >
+        {startDate + " - " + endDate}
+      </p>
       <a
         className="md:hidden text-xs max-md:ml-1  hover:scale-110"
         href={companyLink}

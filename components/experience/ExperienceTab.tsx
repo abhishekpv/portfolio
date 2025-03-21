@@ -32,7 +32,6 @@ const ExperienceTab = ({
           delay: 1,
           type: "spring",
           stiffness: 100,
-          // bounce: 0.25,
         }}
         className="absolute -z-10 bg-gradient-to-r md:bg-gradient-to-b from-gray-100 max-md:via-gray-500 md:from-gray-500 to-gray-100 opacity-50 w-full md:w-0.5 h-0.5 md:h-full md:py-10 box-content  md:left-8 top-8 md:-top-10 rounded-full"
       ></motion.div>

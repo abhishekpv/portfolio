@@ -1,6 +1,7 @@
 import Image, { StaticImageData } from "next/image";
 import { Dispatch, SetStateAction } from "react";
 import CompanyHeader from "./CompanyHeader";
+import { motion } from "motion/react";
 
 type ExperienceTabCardProps = {
   setSelectedCompany: Dispatch<SetStateAction<number>>;
@@ -25,7 +26,7 @@ const ExperienceTabCard = ({
   };
   return (
     <div
-      className={`flex flex-col md:flex-row gap-2 cursor-pointer max-md:items-center relative`}
+      className={`flex flex-col md:flex-row gap-2 max-md:items-center relative`}
       onClick={handleClick}
     >
       <div
@@ -51,11 +52,14 @@ const ExperienceTabCard = ({
           startDate={company.startDate}
         />
       </div>
-      <div
+      <motion.div
+      initial={{x:70,}}
+      whileInView={{x:0,}}
+      transition={{delay:1, duration:0.6, type:'tween'}}
         className={`left-full ml-2 h-0.5 w-24 hidden md:block  duration-500 top-4 bg-gradient-to-l from-gray-500 -z-10 to-transparent   absolute ${
           selected ? "" : "translate-x-28"
         }`}
-      ></div>
+      ></motion.div>
     </div>
   );
 };
