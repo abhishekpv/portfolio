@@ -8,6 +8,7 @@ import { MouseContext } from "@/app/MouseProvider";
 
 const ThemeToggle = () => {
   const [isDarkMode, setIsDarkMode] = useState(false);
+  const [animate, cycle] = useCycle({ rotate: 0 }, { rotate: 360 });
   const { setCursorType } = useContext(MouseContext);
 
   useLayoutEffect(() => {
@@ -30,8 +31,6 @@ const ThemeToggle = () => {
   const toggleTheme = () => {
     setIsDarkMode((prev) => !prev);
   };
-
-  const [animate, cycle] = useCycle({ rotate: 0 }, { rotate: 360 });
 
   return (
     <motion.button

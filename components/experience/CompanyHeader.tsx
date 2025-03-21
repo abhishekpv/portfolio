@@ -31,8 +31,8 @@ const CompanyHeader = ({
         <motion.a
           onMouseEnter={() => setCursorType("pointer")}
           onMouseLeave={() => setCursorType("default")}
-          initial={{ rotate: 360, scale: 1 }}
-          whileHover={{ rotate: 0, scale: 1.5 }}
+          initial={{ rotate: 0, scale: 1 }}
+          whileHover={{ rotate: 360, scale: 1.5 }}
           className="hidden md:flex items-center w-fit justify-center hover:scale-110"
           href={companyLink}
           target="_blank"

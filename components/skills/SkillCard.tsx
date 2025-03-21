@@ -26,7 +26,7 @@ const SkillCard = ({
     <motion.li
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
-      transition={{ delay: 0.5 + index * 0.01, duration: 0.5 }}
+      transition={{ delay: 0.5 + index * 0.01, duration: 0.4 }}
       className="border dark:border-gray-700 min-w-32 max-w-40 w-full mx-auto sm:w-40 rounded-lg overflow-hidden shadow-sm flex flex-col"
     >
       <div className="min-h-20 flex items-center justify-center">
@@ -40,7 +40,7 @@ const SkillCard = ({
         <p
           onMouseEnter={() => setCursorType("textNormal")}
           onMouseLeave={() => setCursorType("default")}
-          className="text-sm text-gray-700 dark:text-white mb-3"
+          className="text-sm text-gray-700 dark:text-white w-fit mb-3"
         >
           {title}
         </p>
