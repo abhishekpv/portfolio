@@ -65,7 +65,7 @@ const ContactForm = () => {
             initial={{ opacity: 0, x: index % 2 ? 50 : -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{
-              duration: 0.6,
+              duration: 0.5,
               type: "tween",
               delay: index % 2 ? 0.9 : 0.7,
             }}
