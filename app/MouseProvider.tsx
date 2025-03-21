@@ -46,6 +46,7 @@ const MouseProvider = ({ children }: MouseProviderProps) => {
       height: 30,
       backgroundColor: "#db2777",
       opacity: 0.9,
+      borderWidth: 0,
     },
     textLarge: {
       x: mousePosition.x - 2.5,
@@ -53,6 +54,7 @@ const MouseProvider = ({ children }: MouseProviderProps) => {
       width: 5,
       height: 40,
       backgroundColor: "#db2777",
+      borderWidth: 0,
     },
     textNormal: {
       x: mousePosition.x - 2.5,
@@ -60,13 +62,14 @@ const MouseProvider = ({ children }: MouseProviderProps) => {
       width: 5,
       height: 25,
       backgroundColor: "#db2777",
+      borderWidth: 0,
     },
   };
 
   return (
     <>
       <motion.div
-        className="cursor fixed w-4 h-4 rounded-full pointer-events-none "
+        className="cursor fixed w-4 h-4 border border-white/75 rounded-full pointer-events-none "
         style={{ zIndex: 1000 }}
         variants={variants}
         animate={cursorType}

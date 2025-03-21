@@ -53,7 +53,7 @@ const ContactForm = () => {
     <motion.form
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
-      transition={{ duration: 0.5, delay: 0.5, type: "tween" }}
+      transition={{ duration: 0.5, delay: 0.5 }}
       onSubmit={onSubmit}
       className="max-w-2xl mx-auto"
     >
@@ -66,7 +66,6 @@ const ContactForm = () => {
             whileInView={{ opacity: 1, x: 0 }}
             transition={{
               duration: 0.5,
-              type: "tween",
               delay: index % 2 ? 0.9 : 0.7,
             }}
             key={field.name}
@@ -83,7 +82,7 @@ const ContactForm = () => {
         onMouseLeave={() => setCursorType("default")}
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5, delay: 1, type: "tween" }}
+        transition={{ duration: 0.5, delay: 0.6 }}
         placeholder="Your message"
         rows={6}
         name="message"
