@@ -24,7 +24,7 @@ const CompanyHeader = ({
         <h3
           onMouseEnter={() => setCursorType("textNormal")}
           onMouseLeave={() => setCursorType("default")}
-          className="w-fit"
+          className="w-full sm:w-fit"
         >
           {companyName}
         </h3>
