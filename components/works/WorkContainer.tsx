@@ -73,7 +73,7 @@ const WorkContainer = () => {
               {project.description}
             </p>
             {project.demo && (
-              <motion.a
+              <a
                 onMouseEnter={() => setCursorType("pointer")}
                 onMouseLeave={() => setCursorType("textNormal")}
                 href={project.demo}
@@ -86,7 +86,7 @@ const WorkContainer = () => {
                   alt="external-link"
                   className="h-3 w-3 min-w-3 dark:invert mt-0.5"
                 />
-              </motion.a>
+              </a>
             )}
           </motion.div>
         );
