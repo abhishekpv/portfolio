@@ -68,10 +68,26 @@ const WorkContainer = () => {
             <p
               onMouseEnter={() => setCursorType("textNormal")}
               onMouseLeave={() => setCursorType("default")}
-              className="px-3 text-sm text-justify text-gray-800 dark:text-gray-300 py-2 mb-2"
+              className="px-3 text-sm text-justify text-gray-800 dark:text-gray-300 py-2 "
             >
               {project.description}
             </p>
+            {project.demo && (
+              <motion.a
+                onMouseEnter={() => setCursorType("pointer")}
+                onMouseLeave={() => setCursorType("textNormal")}
+                href={project.demo}
+                target="_blank"
+                className="flex items-center gap-1 px-3 mb-2  text-sm"
+              >
+                {project.demoTitle}
+                <Image
+                  src={assets.open_link_black}
+                  alt="external-link"
+                  className="h-3 w-3 min-w-3 dark:invert mt-0.5"
+                />
+              </motion.a>
+            )}
           </motion.div>
         );
       })}

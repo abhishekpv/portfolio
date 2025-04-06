@@ -141,13 +141,15 @@ export const workData = [
   },
   {
     id: 1004,
-    title: "Portfolio",
-    link: "https://github.com/abhishekpv/portfolio",
+    title: "InterVox",
+    link: "https://github.com/abhishekpv/interview-platform",
     description:
-      "Portfolio website built with Next.js, Tailwind CSS, and Framer Motion, offers a fast, responsive, and visually engaging experience. It showcases projects, skills, and achievements with smooth animations, optimized performance, and a modern design for a professional online presence.",
+      "An AI-driven voice interview platform using Next.js, Vapi for voice-assisted AI workflows, and Firebase for authentication. The platform allows users to create and attend AI-powered voice interviews, providing real-time conversational interaction and generating personalized feedback with key improvement areas after each session.",
     tag: "Web app",
-    techs: ["Next Js", "Tailwind CSS", "Framer Motion"],
-    bgImage: "/portfolio.png",
+    demo: "https://intervox.vercel.app/",
+    demoTitle: "intervox.vercel.app",
+    techs: ["Next Js", "Tailwind CSS", "Firebase", "Vapi workflow"],
+    bgImage: "/intervox.png",
   },
 ];
 
