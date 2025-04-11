@@ -75,7 +75,7 @@ const WorkContainer = () => {
             {project.demo && (
               <a
                 onMouseEnter={() => setCursorType("pointer")}
-                onMouseLeave={() => setCursorType("textNormal")}
+                onMouseLeave={() => setCursorType("default")}
                 href={project.demo}
                 target="_blank"
                 className="flex items-center gap-1 px-3 mb-2  text-sm"
