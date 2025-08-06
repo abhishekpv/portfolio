@@ -21,7 +21,7 @@ const SectionHeader = ({
         onMouseLeave={() => setCursorType("default")}
         initial={{ opacity: 0, y: -20 }}
         whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5, delay: 0.2 }}
+        transition={{ duration: 0.5, delay: 0. }}
         className="text-center mb-2 text-lg font-Ovo w-fit mx-auto"
       >
         {heading}

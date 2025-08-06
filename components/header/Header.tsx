@@ -45,7 +45,7 @@ const Header = () => {
         transition={{ duration: 0.6, delay: 0.6 }}
         className="max-w-2xl mx-auto font-Ovo px-1"
       >
-        I am a frontend developer from Kerala, India, with over a year of
+        I am a frontend developer from Kerala, India, with over two years of
         experience building dynamic and user-friendly web applications.
       </motion.p>
       <HeroButtons />

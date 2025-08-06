@@ -30,9 +30,8 @@ const ExperienceTabCard = ({
       onClick={handleClick}
     >
       <div
-        className={` px-1 py-1 ml-[6px] overflow-hidden h-fit duration-300 w-fit border-2 bg-white  border-gray-300 rounded-full ${
-          selected ? "" : " scale-95"
-        }`}
+        className={` px-1 py-1 ml-[6px] overflow-hidden h-fit duration-300 w-fit border-2 bg-white  border-gray-300 rounded-full ${selected ? "" : " scale-95"
+          }`}
       >
         <Image
           className="w-10 min-w-10 aspect-square"
@@ -41,9 +40,8 @@ const ExperienceTabCard = ({
         />
       </div>
       <div
-        className={`duration-300 ${
-          selected ? "opacity-100" : " scale-95 -translate-x-1 opacity-75"
-        }`}
+        className={`duration-300 ${selected ? "opacity-100" : " scale-95 -translate-x-1 opacity-75"
+          }`}
       >
         <CompanyHeader
           companyLink={company.companyLink}
@@ -53,12 +51,11 @@ const ExperienceTabCard = ({
         />
       </div>
       <motion.div
-        initial={{ x: 70 }}
-        whileInView={{ x: 0 }}
-        transition={{ delay: 1, duration: 0.6, type: "tween" }}
-        className={`left-full ml-2 h-0.5 w-24 hidden md:block  duration-500 top-4 bg-gradient-to-l from-gray-500 -z-10 to-transparent   absolute ${
-          selected ? "" : "translate-x-28"
-        }`}
+        initial={{ x: 200 }}
+        whileInView={{ x: selected ? 0 : 70 }}
+        transition={{ delay: 0.1, duration: 0.3, type: "tween" }}
+        className={`left-full ml-2 h-0.5 w-24 hidden md:block  duration-500 top-4 bg-gradient-to-l from-gray-500 -z-10 to-transparent   absolute ${selected ? "" : "translate-x-28"
+          }`}
       ></motion.div>
     </div>
   );

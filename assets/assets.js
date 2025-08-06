@@ -51,8 +51,10 @@ import taliwind_logo from "./tailwind_logo.png";
 import redux_logo from "./redux_logo.png";
 import python_logo from "./python.png";
 import langchain_logo from "./langchain-color.svg";
+import myFitApp_logo from "./myFitApp.png";
 
 export const assets = {
+  myFitApp_logo,
   user_image,
   langchain_logo,
   python_logo,
@@ -205,26 +207,48 @@ export const infoList = [
 
 export const experienceData = [
   {
-    companyId: 1001,
-    companyName: "QBurst",
-    CompanyLogo: assets.qburst,
-    startDate: "Aug 2023",
-    companyLink: "https://www.qburst.com/",
+    companyId: 1002,
+    companyName: "myFitApp",
+    CompanyLogo: assets.myFitApp_logo,
+    startDate: "June 2025",
+    companyLink: "https://www.myfitapp.com/",
     endDate: "Present",
     positions: [
       {
         position: "Software Engineer",
         startDate: "Aug 2023",
         endDate: "Present",
-        duration: "1+ years",
+        duration: "less than a year",
+        location: "Remote (India)",
+        locationHref: "https://maps.app.goo.gl/9FisnzDiT8Hrd1Ac8",
+        responsobilities: [
+          "Yet to be updated"
+        ],
+      },
+    ],
+  },
+  {
+    companyId: 1001,
+    companyName: "QBurst",
+    CompanyLogo: assets.qburst,
+    startDate: "Aug 2023",
+    companyLink: "https://www.qburst.com/",
+    endDate: "Jun 2025",
+    positions: [
+      {
+        position: "Software Engineer",
+        startDate: "Aug 2023",
+        endDate: "Jun 2025",
+        duration: "2 years",
         location: "Thrissur, Kerala",
         locationHref: "https://maps.app.goo.gl/VDedLTtuXk19HucU9",
         responsobilities: [
-          "Improved unit test coverage from 40% to 90% by modularizing code and implementing comprehensive test scenarios, enhancing code reliability",
-          "Reduced load times by 25% and improved maintainability by 20% through scalable frontend optimizations",
-          "Increased form accuracy by 30% and reusability by implementing Formik for efficient form handling",
-          "Strengthened security and enhanced user experience by introducing role-based access control, optimizing performance",
-          "Ensured stable releases by resolving 100+ bugs, improving application efficiency and reliability",
+          "Developed scalable frontend solutions, reducing load times by 25% and enhancing maintainability by 20%",
+          "Implemented Formik for form handling, boosting form accuracy by 30% and improving reusability",
+          "Authored 100+ Jest unit tests to ensure component reliability and functionality",
+          "Introduced role-based access control, enhancing security and boosting performance and user satisfaction",
+          "Deployed a local Large Language Model (LLM) to ensure data privacy and enable secure internal usage",
+          "Developed an AI assistant for an internal resource planner application using the locally deployed LLM, improving resource allocation efficiency and decision-making"
         ],
       },
     ],
